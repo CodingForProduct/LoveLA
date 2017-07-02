@@ -3,7 +3,7 @@
 
 **LoveLA** is an app that facilitates the discovery and exploration of Los Angeles by the patrons of the Metro. The app will display the local attractions of the city at any given Metro stop. This will give locals and tourists a streamlined path to discovery.
 
-[Wiki containing the fully fllushed out vision and planning of this app.](https://github.com/CodingForProduct/LoveLA/wiki)
+[Wiki containing the fully flushed out vision and planning of this app.](https://github.com/CodingForProduct/LoveLA/wiki)
 
 ---
 
