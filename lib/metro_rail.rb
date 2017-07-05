@@ -15,7 +15,13 @@ class MetroRail
   	uri = URI('http://api.metro.net/agencies/lametro-rail/routes/')
     res = Net::HTTP.get_response(uri)
     @route_list = JSON.parse(res.body)
-  end
+	end
+
+	def get_stops_list(route_tag)
+		uri = URI("http://api.metro.net/agencies/lametro-rail/routes/#{route_tag}/stops/")
+		res = Net::HTTP.get_response(uri)
+		@stops_list = JSON.parse(res.body)
+	end
 end
 
 # rail = MetroRail.new

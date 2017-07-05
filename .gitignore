@@ -17,5 +17,10 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# Ignore RubyMine config files
+.idea/
+.idea/*
+.DS_Store
+
 coverage
 

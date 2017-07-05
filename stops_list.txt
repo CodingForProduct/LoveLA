@@ -1,0 +1,166 @@
+{
+"items": [
+{
+"latitude": 34.1483599,
+"display_name": "Memorial Park Station",
+"id": "80418",
+"longitude": -118.14751
+},
+{
+"latitude": 34.1518099,
+"display_name": "Lake Station",
+"id": "80419",
+"longitude": -118.13139
+},
+{
+"latitude": 34.0872299,
+"display_name": "Heritage Square / Arroyo Station",
+"id": "80412",
+"longitude": -118.21321
+},
+{
+"latitude": 34.0982399,
+"display_name": "Southwest Museum Station",
+"id": "80413",
+"longitude": -118.20671
+},
+{
+"latitude": 34.0638599,
+"display_name": "Chinatown Station",
+"id": "80410",
+"longitude": -118.23584
+},
+{
+"latitude": 34.0809499,
+"display_name": "Lincoln Heights / Cypress Park Station",
+"id": "80411",
+"longitude": -118.22043
+},
+{
+"latitude": 34.1335199,
+"display_name": "Fillmore Station",
+"id": "80416",
+"longitude": -118.14813
+},
+{
+"latitude": 34.1419099,
+"display_name": "Del Mar Station",
+"id": "80417",
+"longitude": -118.14821
+},
+{
+"latitude": 34.1111799,
+"display_name": "Highland Park Station",
+"id": "80414",
+"longitude": -118.19261
+},
+{
+"latitude": 34.1151899,
+"display_name": "South Pasadena Station",
+"id": "80415",
+"longitude": -118.15789
+},
+{
+"latitude": 34.1368099,
+"display_name": "Apu / Citrus College Station",
+"id": "80427",
+"longitude": -117.89164
+},
+{
+"latitude": 34.1358599,
+"display_name": "Azusa Downtown Station",
+"id": "80426",
+"longitude": -117.90663
+},
+{
+"latitude": 34.1290499,
+"display_name": "Irwindale Station",
+"id": "80425",
+"longitude": -117.93251
+},
+{
+"latitude": 34.1325199,
+"display_name": "Duarte / City Of Hope Station",
+"id": "80424",
+"longitude": -117.96768
+},
+{
+"latitude": 34.1331599,
+"display_name": "Monrovia Station",
+"id": "80423",
+"longitude": -118.00347
+},
+{
+"latitude": 34.1428599,
+"display_name": "Arcadia Station",
+"id": "80422",
+"longitude": -118.0292
+},
+{
+"latitude": 34.1477499,
+"display_name": "Sierra Madre Villa Station",
+"id": "80421",
+"longitude": -118.08121
+},
+{
+"latitude": 34.1524199,
+"display_name": "Allen Station",
+"id": "80420",
+"longitude": -118.11435
+},
+{
+"latitude": 34.0560599,
+"display_name": "Union Station - Metro Gold Line",
+"id": "80409",
+"longitude": -118.23476
+},
+{
+"latitude": 34.0500999,
+"display_name": "Little Tokyo / Arts District Station",
+"id": "80408",
+"longitude": -118.2379
+},
+{
+"latitude": 34.0333999,
+"display_name": "Atlantic Station",
+"id": "80401",
+"longitude": -118.15447
+},
+{
+"latitude": 34.0333199,
+"display_name": "Maravilla Station",
+"id": "80403",
+"longitude": -118.16814
+},
+{
+"latitude": 34.0333599,
+"display_name": "East La Civic Center Station",
+"id": "80402",
+"longitude": -118.16121
+},
+{
+"latitude": 34.0437499,
+"display_name": "Soto Station",
+"id": "80405",
+"longitude": -118.21006
+},
+{
+"latitude": 34.0342999,
+"display_name": "Indiana Station",
+"id": "80404",
+"longitude": -118.19218
+},
+{
+"latitude": 34.0476299,
+"display_name": "Pico / Aliso Station",
+"id": "80407",
+"longitude": -118.22594
+},
+{
+"latitude": 34.0472199,
+"display_name": "Mariachi Plaza / Boyle Heights Station",
+"id": "80406",
+"longitude": -118.21965
+}
+]
+}
