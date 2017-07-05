@@ -1,0 +1,10 @@
+<h1>Route List</h3>
+<h3><% @metro = MetroRail.new %>
+	<% @routelist = {} %>
+	<% @routelist = @metro.get_route_list %>
+	<% @routelist.each {|k,v| %>
+		<% v.each {|key, value| %>
+			<br><%= key['display_name'] %>
+		<% } %></br>
+	<% } %>
+</h3>
