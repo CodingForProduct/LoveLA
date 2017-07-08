@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   get '/stop_list', to: 'home#stop_list' do
     #TODO - get stop list with route tag
   end
+
 end
+
+# Model MetroRoute/metro_route.rb
+# View metro_route.html.erb
+# Controller MetroRoutes/metro_routes.rb
