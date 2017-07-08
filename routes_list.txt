@@ -1,0 +1,29 @@
+{
+"items": [
+{
+"display_name": "Metro Blue Line (801)",
+"id": "801"
+},
+{
+"display_name": "Metro Red Line (802)",
+"id": "802"
+},
+{
+"display_name": "Metro Green Line (803)",
+"id": "803"
+},
+{
+"display_name": "Metro Gold Line (804)",
+"id": "804"
+},
+{
+"display_name": "Metro Purple Line (805)",
+"id": "805"
+},
+{
+"display_name": "Metro Expo Line (806)",
+"id": "806"
+}
+]
+} 
+
