@@ -29,8 +29,34 @@ class MetroRail
 		uri = URI('https://gitlab.com/LACMTA/gtfs_rail/blob/master/routes.txt')
 		res = Net::HTTP.get_response(uri)
 		@route_list = res
-	end
+  end
+
+  def get_token
+
+    params =  {
+        :client_id => ENV['YELP_LOVELA_CLIENT_ID'],
+        :client_secret => ENV['YELP_LOVELA_CLIENT_SECRET'],
+        :grant_type=> 'client_credentials'
+    }
+
+    uri = URI('https://api.yelp.com/oauth2/token')
+    uri.query = URI.encode_www_form([["q", "ruby"], ["lang", "en"]])
+
+    response = Net::HTTP.post_form( uri, params )
+    if( response.is_a?( Net::HTTPSuccess ) )
+      # your request was successful
+      puts "The Response -> #{response.body}"
+    else
+      # your request failed
+      puts "Didn't succeed :("
+    end
+
+  end
 end
+
+mr = MetroRail.new
+mr.get_token
+
 
 
 # route_num = '806'
