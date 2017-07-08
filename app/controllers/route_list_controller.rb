@@ -1,6 +1,6 @@
 class RouteListController < ActionController::Base
 
-  def routelist
+  def route_list
   	
   end
   

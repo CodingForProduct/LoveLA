@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705172045) do
+ActiveRecord::Schema.define(version: 20170707162758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170705172045) do
     t.string   "longitude"
     t.datetime "created_at"
     t.datetime "update_at"
+    t.string   "stop_id"
   end
 
 end

@@ -1,0 +1,2 @@
+class StopList
+end
