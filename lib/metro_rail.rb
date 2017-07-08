@@ -51,10 +51,10 @@ end
 #   "#{k['display_name']}"
 # end
 
-dm = DatabaseMgr.new
-rs = dm.execute("SELECT route_id, display_name, created_at from stops where route_id = '804'")
-rs.each do |row|
-  puts "%s %s %s" % [ row['route_id'], row['display_name'], row['created_at'] ]
-end
+# dm = DatabaseMgr.new
+# rs = dm.execute("SELECT route_id, display_name, created_at from stops where route_id = '804'")
+# rs.each do |row|
+#   puts "%s %s %s" % [ row['route_id'], row['display_name'], row['created_at'] ]
+# end
 #
 

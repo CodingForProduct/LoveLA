@@ -4,7 +4,7 @@
 	<% @routelist = @metro.get_route_list %>
 	<% @routelist.each {|k,v| %>
 		<% v.each {|key, value| %>
-			<br /><%= key['display_name'] %>
-		<% } %>
+			<br /><%= key['display_name'] %> <%= link_to 'Stop List', stop_list_path %>
+<% } %>
 	<% } %>
 </h3>
