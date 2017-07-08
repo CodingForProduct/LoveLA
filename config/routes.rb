@@ -6,14 +6,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get root 'home#index'
 
- get '/route_list', to: 'home#route_list' do
- 	@metro = MetroRail.new
- 	@routelist = @metro.get_route_list
- end
+  get '/route_list/', to: 'route_list#show'
+ 	#@metro = MetroRail.new
+ 	#@routelist = @metro.get_route_list
+  get '/stop_list/', ':route_id', to: 'stop_list#show'
 
-  get '/stop_list', to: 'home#stop_list' do
-    #TODO - get stop list with route tag
-  end
 
 end
 

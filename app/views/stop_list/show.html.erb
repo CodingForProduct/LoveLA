@@ -1,8 +1,5 @@
 <h1>Stop List</h1>
 <div>
-  <% @metro = MetroRail.new %>
-  <% @stoplist = {} %>
-  <% @stoplist = @metro.get_stop_list('804') %>
   <% @stoplist['items'].each do |k,v| %>
   <%= "#{k['display_name']}" %> <br />
   <% end %>
