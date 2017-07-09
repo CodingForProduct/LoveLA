@@ -1,8 +1,9 @@
-<h1>Route List</h1>
-<h3>
-	<% @routelist.each {|k,v| %>
-		<% v.each {|key, value| %>
-			<br /><%= key['display_name'] %> <%= link_to 'Stop List', stop_list_path(:route_id => "#{key['id'][0..2]}") %>
-<% } %>
-	<% } %>
-</h3>
+<div class="well">
+  <h3>
+  	<% @routelist.each {|k,v| %>
+  		<% v.each {|key, value| %>
+  			<br /><%= key['display_name'] %> <%= link_to 'Stop List', stop_list_path(:route_id => "#{key['id'][0..2]}") %>
+  <% } %>
+  	<% } %>
+  </h3>
+</div>

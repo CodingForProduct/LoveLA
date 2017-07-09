@@ -1,10 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.jumbotron {
+.well {
   background-image: asset-url('palmtree.png');
   background-size: cover;
-  height: 600px;
+  width: 80%;
+  height: 95%;
   color: white;
 }
 .jumbotron h1 {
@@ -27,9 +28,14 @@ body {
 }
 
 h1 {
-  font-size: 172px;
+  font-size: 72px;
 }
 
 h2 {
   font-size: 72px;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    }

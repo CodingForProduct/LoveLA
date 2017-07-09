@@ -3,33 +3,33 @@ require 'net/http'
 require_relative('database_mgr')
 
 class MetroRail
-	attr_accessor :route_list, :route, :stops_list, :stop
+  attr_accessor :route_list, :route, :stops_list, :stop
 
-	def initialize
-		@route_list = {}
-		@route = ""
-		@stops_list = {}
-		@stop = ""
-	end
+  def initialize
+    @route_list = {}
+    @route = ""
+    @stops_list = {}
+    @stop = ""
+  end
 
   def get_route_list
-  	uri = URI('http://api.metro.net/agencies/lametro-rail/routes/')
+    uri = URI('http://api.metro.net/agencies/lametro-rail/routes/')
     res = Net::HTTP.get_response(uri)
     @route_list = JSON.parse(res.body)
-	end
+  end
 
-	def get_stop_list(route_tag)
-		uri = URI("http://api.metro.net/agencies/lametro-rail/routes/#{route_tag}/stops/")
-		res = Net::HTTP.get_response(uri)
-		#HTTPOK
-		@stops_list = JSON.parse(res.body)
-	end
+  def get_stop_list(route_tag)
+    uri = URI("http://api.metro.net/agencies/lametro-rail/routes/#{route_tag}/stops/")
+    res = Net::HTTP.get_response(uri)
+    #HTTPOK
+    @stops_list = JSON.parse(res.body)
+  end
 
-	def get_routes_gtfs
-		uri = URI('https://gitlab.com/LACMTA/gtfs_rail/blob/master/routes.txt')
-		res = Net::HTTP.get_response(uri)
-		@route_list = res
-	end
+  def get_routes_gtfs
+    uri = URI('https://gitlab.com/LACMTA/gtfs_rail/blob/master/routes.txt')
+    res = Net::HTTP.get_response(uri)
+    @route_list = res
+  end
 end
 
 
@@ -45,9 +45,9 @@ end
 # stops['items'].each do |k,v|
 #   puts "#{route_num},
 #     #{k['id']},
-# 	'#{k['display_name']}',
-# 	#{k['latitude']},
-# 	#{k['longitude']}"
+#   '#{k['display_name']}',
+#   #{k['latitude']},
+#   #{k['longitude']}"
 #   "#{k['display_name']}"
 # end
 
@@ -57,4 +57,3 @@ end
 #   puts "%s %s %s" % [ row['route_id'], row['display_name'], row['created_at'] ]
 # end
 #
-
