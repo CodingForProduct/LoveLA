@@ -10,8 +10,6 @@ Rails.application.routes.draw do
  	#@metro = MetroRail.new
  	#@routelist = @metro.get_route_list
   get '/stop_list/', ':route_id', to: 'stop_list#show'
-
-
 end
 
 # Model MetroRoute/metro_route.rb
