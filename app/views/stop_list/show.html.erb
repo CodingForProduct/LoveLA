@@ -1,5 +1,5 @@
-<h1>Stop List</h1>
-<div>
+<div class="well">
+  <%#= @routelist.display_name %>
   <% @stoplist['items'].each do |k,v| %>
   <%= "#{k['display_name']}" %> <br />
   <% end %>
