@@ -1,0 +1,35 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.jumbotron {
+  background-image: asset-url('palmtree.png');
+  background-size: cover;
+  height: 600px;
+  color: white;
+}
+.jumbotron h1 {
+  color: #white;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+}
+
+body {
+  padding-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+
+.container {
+  font-family: 'Raleway';
+}
+
+h1 {
+  font-size: 172px;
+}
+
+h2 {
+  font-size: 72px;
+}

@@ -1,6 +1,8 @@
-<h1>Stop List</h1>
-<div>
-  <% @stoplist['items'].each do |k,v| %>
-  <%= "#{k['display_name']}" %> <br />
-  <% end %>
+<div style="text-align: center;">
+  <h1 style="font-family:'Arial';">Stop List</h1>
+  <div style="font-family:'Arial';">
+    <% @stoplist['items'].each do |k,v| %>
+    <%= "#{k['display_name']}" %> <br />
+    <% end %>
+  </div>
 </div>
