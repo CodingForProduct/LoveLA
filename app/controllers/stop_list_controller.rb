@@ -1,7 +1,7 @@
 require_relative '../../lib/metro_rail'
 require_relative '../../lib/database_mgr'
 
-class StopListController < ActionController::Base
+class StopListController < ApplicationController
   @stoplist = {}
   def show
     if params[:route_id]

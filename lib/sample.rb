@@ -1,17 +1,20 @@
 require_relative 'metro_rail'
+require_relative 'yelp_helper'
 require 'net/http'
 require 'uri'
 require 'byebug'
 require 'pry'
 require 'json'
 
+include YelpHelper
+
 @metro = MetroRail.new
 
-@token = @metro.get_token
+@token = get_token
 @term = 'dinner'
 @location = 'Los Angeles'
 
-uri = URI("https://api.yelp.com/v3/businesses/search?term=#{@term}&location=#{@location}&limit=5")
+uri = URI("https://api.yelp.com/v3/businesses/search?term=#{@term}&location=#{@location}&limit=10")
 
 response = ""
 request = Net::HTTP::Get.new uri
@@ -26,4 +29,13 @@ end
 # response.body['businesses'].each do |res|
 #   puts "#{res['id']} - #{res['name']}"
 # end
-puts JSON.parse(response.body)
+result = JSON.parse(response.body)
+
+result.each do |k,v|
+  if v.class == Array
+    bus = v
+  end
+  bus.each do |b|
+    puts "business id - #{b["id"]}, business name - #{b["name"]}"
+  end if !bus.nil?
+end
