@@ -1,5 +1,4 @@
 require 'net/http'
-require 'JSON'
 require_relative('database_mgr')
 
 class MetroRail
