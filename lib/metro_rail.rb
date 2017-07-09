@@ -25,14 +25,8 @@ class MetroRail
 		@stops_list = JSON.parse(res.body)
 	end
 
-	def get_routes_gtfs
-		uri = URI('https://gitlab.com/LACMTA/gtfs_rail/blob/master/routes.txt')
-		res = Net::HTTP.get_response(uri)
-		@route_list = res
-  end
-
   def get_token
-
+    @return_msg = ""
     params =  {
         :client_id => ENV['YELP_LOVELA_CLIENT_ID'],
         :client_secret => ENV['YELP_LOVELA_CLIENT_SECRET'],
@@ -44,19 +38,19 @@ class MetroRail
 
     response = Net::HTTP.post_form( uri, params )
     if( response.is_a?( Net::HTTPSuccess ) )
-      # your request was successful
-      puts "The Response -> #{response.body}"
+      @return_msg = JSON.parse(response.body)
+      @return_msg['access_token']
     else
-      # your request failed
-      puts "Didn't succeed :("
+      @return_msg = 'request failed'
+
     end
 
   end
 end
 
-mr = MetroRail.new
-mr.get_token
-
+#mr = MetroRail.new
+#mr.get_token
+#{"access_token": "IUnagA-FYKnXsPNZ0nv5k2QonwcAJsxEJOq_LqXfwG7fGB8jP9lZOIAgkSiG_jYN7iWbI-fNlwTmwrco_QAu16z_cqwcSpPWeYP6roeLca-imog8arS373eq0k5hWXYx", "expires_in": 15528241, "token_type": "Bearer"}
 
 
 # route_num = '806'
