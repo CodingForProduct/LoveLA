@@ -1,0 +1,88 @@
+{
+"items": [
+{
+"latitude": 33.9140299,
+"display_name": "Norwalk Station",
+"id": "80314",
+"longitude": -118.10472
+},
+{
+"latitude": 33.9248799,
+"display_name": "Long Beach Blvd Station",
+"id": "80312",
+"longitude": -118.20994
+},
+{
+"latitude": 33.9334099,
+"display_name": "Hawthorne / Lennox Station",
+"id": "80306",
+"longitude": -118.3516
+},
+{
+"latitude": 33.9251999,
+"display_name": "Crenshaw Station",
+"id": "80307",
+"longitude": -118.32655
+},
+{
+"latitude": 33.9231999,
+"display_name": "Mariposa Station",
+"id": "80304",
+"longitude": -118.38757
+},
+{
+"latitude": 33.9296199,
+"display_name": "Aviation / Lax Station",
+"id": "80305",
+"longitude": -118.37713
+},
+{
+"latitude": 33.9052999,
+"display_name": "Douglas Station",
+"id": "80302",
+"longitude": -118.38311
+},
+{
+"latitude": 33.9160599,
+"display_name": "El Segundo Station",
+"id": "80303",
+"longitude": -118.38654
+},
+{
+"latitude": 33.9130699,
+"display_name": "Lakewood Blvd Station",
+"id": "80313",
+"longitude": -118.1406
+},
+{
+"latitude": 33.8946399,
+"display_name": "Redondo Beach Station",
+"id": "80301",
+"longitude": -118.3692
+},
+{
+"latitude": 33.9274599,
+"display_name": "Avalon Station",
+"id": "80310",
+"longitude": -118.26522
+},
+{
+"latitude": 33.9282599,
+"display_name": "Willowbrook - Rosa Parks Station - Metro Green Line",
+"id": "80311",
+"longitude": -118.23805
+},
+{
+"latitude": 33.9286799,
+"display_name": "Vermont / Athens Station",
+"id": "80308",
+"longitude": -118.29173
+},
+{
+"latitude": 33.9287099,
+"display_name": "Harbor Freeway Station",
+"id": "80309",
+"longitude": -118.2811
+}
+]
+}
