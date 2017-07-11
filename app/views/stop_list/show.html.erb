@@ -1,6 +1,7 @@
-<div class="well">
-  <%#= @routelist.display_name %>
-  <% @stoplist['items'].each do |k,v| %>
-  <%= "#{k['display_name']}" %> <br />
-  <% end %>
-</div>
+<%= render 'shared/navbar' %>
+  <div class="well">
+    <%#= @routelist.display_name %>
+    <% @stoplist['items'].each do |k,v| %>
+      <h4><%= "#{k['display_name']}" %></h4>
+    <% end %>
+  </div>

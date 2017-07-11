@@ -1,7 +1,8 @@
-<div class="well">
-	<% @routelist.each do |k,v| %>
-		<% v.each do |key, value| %>
-			<br /><%= link_to "#{key['display_name'][5..40]}", stop_list_path(:route_id => "#{key['id'][0..2]}") %>
-     <% end %>
-	<% end %>
-</div>
+<%= render 'shared/navbar' %>
+  <div class="well">
+    <% @routelist.each do |k,v| %>
+      <% v.each do |key, value| %>
+        <h2><%= link_to "#{key['display_name'][5..40]}", stop_list_path(:route_id => "#{key['id'][0..2]}") %></h2>
+       <% end %>
+    <% end %>
+  </div>
