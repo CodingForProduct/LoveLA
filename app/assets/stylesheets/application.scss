@@ -1,41 +1,221 @@
+$navbar-default-bg: #C65D57;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,900');
+
+@link-color :
+@brand-primary: darken(#428bca, 6.5%);
+@brand-success: #5cb85c;
+@brand-info:    #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger:  #d9534f;
 
 .well {
-  background-image: asset-url('palmtree.png');
-  background-size: cover;
-  width: 80%;
-  height: 95%;
-  color: white;
-}
-.jumbotron h1 {
-  color: #white;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  padding-top: 50px;
+  align: center;
+  width: 50%;
+  opacity: 80%;
 }
 
 body {
+  background-image: asset-url('metro-map.png');
+  background-size: 100%;
   padding-top: 10px;
   font-family: 'Raleway', sans-serif;
   color: black;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #000;
+}
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+
+h3 { 
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+h4 { 
+    display: block;
+    font-size: 1em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+h5 { 
+    display: block;
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+h6 { 
+    display: block;
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Raleway';
+    font-weight: bold;
 }
 
 .container {
   font-family: 'Raleway';
 }
 
-h1 {
-  font-size: 72px;
-}
-
-h2 {
-  font-size: 72px;
-}
 
 img {
+    background-repeat: no-repeat;
     max-width: 100%;
     height: auto;
-    }
+}
+
+/* ----------- --------------------------- */
+/* MEDIA QUERIES https://v4-alpha.getbootstrap.com/layout/overview/ */ 
+
+/*@include media-breakpoint-up(xs) { ... }*/
+/*@include media-breakpoint-up(sm) { ... }*/
+/*@include media-breakpoint-up(md) { ... }*/
+/*@include media-breakpoint-up(lg) { ... }*/
+/*@include media-breakpoint-up(xl) { ... }*/
+
+// Example usage:
+/*@include media-breakpoint-up(sm) {*/
+/*  .some-class {*/
+/*    display: block;*/
+/*  }*/
+/*}*/
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+

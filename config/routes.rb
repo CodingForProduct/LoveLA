@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   @routelist = {}
   @stoplist = {}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'home#index'
-
+  #root 'home#index'
+  root 'route_list#show'
   get '/route_list/', to: 'route_list#show'
  	#@metro = MetroRail.new
  	#@routelist = @metro.get_route_list
