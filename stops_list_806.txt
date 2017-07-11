@@ -1,0 +1,118 @@
+{
+"items": [
+{
+"latitude": 34.0182299,
+"display_name": "Expo Park / Usc Station",
+"id": "80125",
+"longitude": -118.28573
+},
+{
+"latitude": 34.0221199,
+"display_name": "Jefferson / Usc Station",
+"id": "80124",
+"longitude": -118.27812
+},
+{
+"latitude": 34.0183299,
+"display_name": "Expo / Western Station",
+"id": "80127",
+"longitude": -118.30891
+},
+{
+"latitude": 34.0291099,
+"display_name": "Lattc / Ortho Institute Station",
+"id": "80123",
+"longitude": -118.2736
+},
+{
+"latitude": 34.0486099,
+"display_name": "7th Street / Metro Center Station - Metro Blue & Expo Lines",
+"id": "80122",
+"longitude": -118.25882
+},
+{
+"latitude": 34.0182399,
+"display_name": "Expo / Vermont Station",
+"id": "80126",
+"longitude": -118.29154
+},
+{
+"latitude": 34.0407299,
+"display_name": "Pico Station",
+"id": "80121",
+"longitude": -118.26612
+},
+{
+"latitude": 34.0140099,
+"display_name": "Downtown Santa Monica Station",
+"id": "80139",
+"longitude": -118.49138
+},
+{
+"latitude": 34.0231599,
+"display_name": "17th Street / Smc Station",
+"id": "80138",
+"longitude": -118.48037
+},
+{
+"latitude": 34.0225299,
+"display_name": "Expo / Crenshaw Station",
+"id": "80128",
+"longitude": -118.33508
+},
+{
+"latitude": 34.0239799,
+"display_name": "Farmdale Station",
+"id": "80129",
+"longitude": -118.34609
+},
+{
+"latitude": 34.0354099,
+"display_name": "Expo / Sepulveda Station",
+"id": "80135",
+"longitude": -118.43423
+},
+{
+"latitude": 34.0368199,
+"display_name": "Westwood / Rancho Park Station",
+"id": "80134",
+"longitude": -118.42458
+},
+{
+"latitude": 34.0279899,
+"display_name": "26th Street / Bergamot Station",
+"id": "80137",
+"longitude": -118.46912
+},
+{
+"latitude": 34.0317099,
+"display_name": "Expo / Bundy Station",
+"id": "80136",
+"longitude": -118.4529
+},
+{
+"latitude": 34.0263599,
+"display_name": "La Cienega / Jefferson Station",
+"id": "80131",
+"longitude": -118.37212
+},
+{
+"latitude": 34.0247999,
+"display_name": "Expo / La Brea / Ethel Bradley Station",
+"id": "80130",
+"longitude": -118.35516
+},
+{
+"latitude": 34.0293199,
+"display_name": "Palms Station",
+"id": "80133",
+"longitude": -118.40425
+},
+{
+"latitude": 34.0278999,
+"display_name": "Culver City Station",
+"id": "80132",
+"longitude": -118.38899
+}
+]
+}

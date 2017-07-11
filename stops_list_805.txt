@@ -1,0 +1,52 @@
+{
+"items": [
+{
+"latitude": 34.0626999,
+"display_name": "Wilshire / Vermont Station",
+"id": "80209",
+"longitude": -118.29008
+},
+{
+"latitude": 34.0563699,
+"display_name": "Westlake / Macarthur Park Station",
+"id": "80210",
+"longitude": -118.27488
+},
+{
+"latitude": 34.0486299,
+"display_name": "7th Street / Metro Center Station - Metro Red & Purple Lines",
+"id": "80211",
+"longitude": -118.25868
+},
+{
+"latitude": 34.0493199,
+"display_name": "Pershing Square Station",
+"id": "80212",
+"longitude": -118.25126
+},
+{
+"latitude": 34.0548999,
+"display_name": "Civic Center / Grand Park Station",
+"id": "80213",
+"longitude": -118.24606
+},
+{
+"latitude": 34.0561999,
+"display_name": "Union Station - Metro Red & Purple Lines",
+"id": "80214",
+"longitude": -118.23425
+},
+{
+"latitude": 34.0617499,
+"display_name": "Wilshire / Normandie Station",
+"id": "80215",
+"longitude": -118.30146
+},
+{
+"latitude": 34.0616899,
+"display_name": "Wilshire / Western Station",
+"id": "80216",
+"longitude": -118.30876
+}
+]
+}

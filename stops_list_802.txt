@@ -1,0 +1,88 @@
+{
+"items": [
+{
+"latitude": 34.0548999,
+"display_name": "Civic Center / Grand Park Station",
+"id": "80213",
+"longitude": -118.24606
+},
+{
+"latitude": 34.0561999,
+"display_name": "Union Station - Metro Red & Purple Lines",
+"id": "80214",
+"longitude": -118.23425
+},
+{
+"latitude": 34.0626999,
+"display_name": "Wilshire / Vermont Station",
+"id": "80209",
+"longitude": -118.29008
+},
+{
+"latitude": 34.0765299,
+"display_name": "Vermont / Beverly Station",
+"id": "80208",
+"longitude": -118.29169
+},
+{
+"latitude": 34.0899099,
+"display_name": "Vermont / Santa Monica Station",
+"id": "80207",
+"longitude": -118.29173
+},
+{
+"latitude": 34.0977099,
+"display_name": "Vermont / Sunset Station",
+"id": "80206",
+"longitude": -118.29176
+},
+{
+"latitude": 34.1017399,
+"display_name": "Hollywood / Western Station",
+"id": "80205",
+"longitude": -118.30812
+},
+{
+"latitude": 34.1016299,
+"display_name": "Hollywood / Vine Station",
+"id": "80204",
+"longitude": -118.32518
+},
+{
+"latitude": 34.1015499,
+"display_name": "Hollywood / Highland Station",
+"id": "80203",
+"longitude": -118.33855
+},
+{
+"latitude": 34.1399999,
+"display_name": "Universal / Studio City Station",
+"id": "80202",
+"longitude": -118.3627
+},
+{
+"latitude": 34.1684999,
+"display_name": "North Hollywood Station",
+"id": "80201",
+"longitude": -118.37681
+},
+{
+"latitude": 34.0563699,
+"display_name": "Westlake / Macarthur Park Station",
+"id": "80210",
+"longitude": -118.27488
+},
+{
+"latitude": 34.0486299,
+"display_name": "7th Street / Metro Center Station - Metro Red & Purple Lines",
+"id": "80211",
+"longitude": -118.25868
+},
+{
+"latitude": 34.0493199,
+"display_name": "Pershing Square Station",
+"id": "80212",
+"longitude": -118.25126
+}
+]
+}
