@@ -19,11 +19,16 @@ $navbar-default-bg: #C65D57;
 }
 
 body {
-  background-image: asset-url('metro-map.png');
+  background-image: asset-url('metro-map.jpg');
   background-size: 100%;
   padding-top: 10px;
   font-family: 'Raleway', sans-serif;
   color: black;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: 700;
 }
 
 .navbar-default .navbar-nav > li > a {
