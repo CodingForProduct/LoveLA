@@ -1,5 +1,3 @@
-require_relative '../lib/metro_rail'
-
 Rails.application.routes.draw do
   @routelist = {}
   @stoplist = {}
@@ -7,4 +5,5 @@ Rails.application.routes.draw do
   #root 'home#index'
   root 'route_list#index'
   get '/stop/', ':route_id', to: 'stop_list#index'
+  get '/places/', ':longitude',':latitude', to: 'places#index'
 end

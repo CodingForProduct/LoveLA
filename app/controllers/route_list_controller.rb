@@ -1,6 +1,3 @@
-require_relative '../../lib/metro_rail'
-require_relative '../../lib/database_mgr'
-
 class RouteListController < ApplicationController
   @routelist = {}
 
@@ -10,12 +7,6 @@ class RouteListController < ApplicationController
       @stoplist = Stop.where(route_id: params[:route_id])
     end
   end
-
-
-#  def show
-#    @metro = MetroRail.new
-#    @routelist = @metro.get_route_list
-#  end
 
   private
 

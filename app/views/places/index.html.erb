@@ -1,0 +1,7 @@
+<%= render 'layouts/navbar' %>
+
+<div class="well">
+  <% @places.each do |row| %>
+      <%= "#{row['name']}" %> <br />
+  <% end %>
+</div>
