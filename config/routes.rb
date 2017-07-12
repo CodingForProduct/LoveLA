@@ -5,13 +5,6 @@ Rails.application.routes.draw do
   @stoplist = {}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #root 'home#index'
-  root 'route_list#show'
-  get '/route_list/', to: 'route_list#show'
- 	#@metro = MetroRail.new
- 	#@routelist = @metro.get_route_list
-  get '/stop_list/', ':route_id', to: 'stop_list#show'
+  root 'route_list#index'
+  get '/stop/', ':route_id', to: 'stop_list#index'
 end
-
-# Model MetroRoute/metro_route.rb
-# View metro_route.html.erb
-# Controller MetroRoutes/metro_routes.rb

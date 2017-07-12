@@ -3,12 +3,11 @@ require_relative '../../lib/database_mgr'
 
 class StopListController < ApplicationController
   @stoplist = {}
-  def show
+  def index
     if params[:route_id]
       @metro = MetroRail.new
       @stoplist = @metro.get_stop_list(params[:route_id])
     end
-
   end
   #
   # def search
