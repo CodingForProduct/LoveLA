@@ -1,8 +1,0 @@
-<%= render 'layouts/navbar' %>
-<div class="well">
-  <% @routelist.each do |k,v| %>
-    <% v.each do |key, value| %>
-      <h2><%= link_to "#{key['display_name'][5..40]}", stop_list_path(:route_id => "#{key['id']") %></h2>
-     <% end %>
-  <% end %>
-</div>
