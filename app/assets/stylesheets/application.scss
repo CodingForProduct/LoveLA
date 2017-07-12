@@ -4,7 +4,6 @@ $navbar-default-bg: #C65D57;
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,900');
 
-@link-color :
 @brand-primary: darken(#428bca, 6.5%);
 @brand-success: #5cb85c;
 @brand-info:    #5bc0de;
@@ -13,7 +12,6 @@ $navbar-default-bg: #C65D57;
 
 .well {
   padding-top: 50px;
-  align: center;
   width: 50%;
   opacity: 80%;
 }
@@ -114,6 +112,60 @@ img {
     background-repeat: no-repeat;
     max-width: 100%;
     height: auto;
+}
+
+.route-list-well {
+  padding-top: 5px;
+  width: 100%;
+  background-color: white;
+  word-wrap: break-word;
+}
+
+.blue-line {
+  color: #3579DC;
+  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.red-line {
+  color: #C65D57;
+  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.green-line {
+  color: #5cb85c;
+  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.gold-line {
+  color: #FF7F24;
+  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.purple-line {
+  color: #694489;
+  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.expo-line {
+  color: #0198E1;
+  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.route-location {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /* ----------- --------------------------- */

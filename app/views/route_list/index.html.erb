@@ -1,8 +1,36 @@
 <%= render 'layouts/navbar' %>
 
-
-<div class="well">
-  <% @routelist.each do |row| %>
-      <br /><%= link_to "#{row['display_name']}", stop_list_path(:route_id => "#{row['route_id'][0..2]}") %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-3">
+      <div class="well">
+        <% @routelists.each do |route| %>
+          <div class="well route-list-well">
+            <% if route.route_id == '801' %>
+              <h2 class='blue-line'><%= route.display_name %></h2>
+            <% elsif route.route_id == '802' %>
+              <h2 class='red-line'><%= route.display_name %></h2>
+            <% elsif route.route_id == '803' %>
+              <h2 class='green-line'><%= route.display_name %></h2>
+            <% elsif route.route_id == '804' %>
+              <h2 class='gold-line'><%= route.display_name %></h2>
+            <% elsif route.route_id == '805' %>
+              <h2 class='purple-line'><%= route.display_name %></h2>
+            <% else route.route_id == '806' %>
+              <h2 class='expo-line'><%= route.display_name %></h2>
+            <% end %>
+            <h2 class='route-location'><%= route.route_location %></h2>
+          </div>
+        <% end %>
+      </div>
+   </div>
+  </div>
 </div>
+<!--
+<div class="well">
+  <%# @routelist.each do |row| %>
+      <br /><%#= link_to "#{row.display_name}", stop_list_path(:route_id => "#{row.route_id[0..2]}") %>
+  <%# end %>
+</div>
+-->
+
