@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   #root 'home#index'
   root 'route_list#index'
   get '/stop/', ':route_id', to: 'stop_list#index'
-  get '/places/', ':longitude',':latitude', to: 'places#index'
+  get '/place/', ':longitude',':latitude', to: 'place#index'
 end
