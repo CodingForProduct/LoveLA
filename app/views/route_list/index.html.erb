@@ -1,0 +1,8 @@
+<%= render 'layouts/navbar' %>
+
+
+<div class="well">
+  <% @routelist.each do |row| %>
+      <br /><%= link_to "#{row['display_name']}", stop_list_path(:route_id => "#{row['route_id'][0..2]}") %>
+  <% end %>
+</div>
