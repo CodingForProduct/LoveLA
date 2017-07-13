@@ -1,4 +1,8 @@
 # hard code routes since there's only a few
+
+ActiveRecord::Base.connection.execute("TRUNCATE routes RESTART IDENTITY")
+ActiveRecord::Base.connection.execute("TRUNCATE stops RESTART IDENTITY")
+
 routes = Route.create([{ route_id: '801', display_name: 'Blue Line', route_location: 'Downtown LA to Long Beach' },
                        { route_id: '802', display_name: 'Red Line', route_location: 'North Hollywood to Union Station' },
                        { route_id: '803', display_name: 'Green Line', route_location: 'Redondo Beach to Norwalk' },
