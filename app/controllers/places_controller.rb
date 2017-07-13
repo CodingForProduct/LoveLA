@@ -2,7 +2,7 @@ require_relative '../../lib/yelp_helper'
 require 'net/http'
 require 'uri'
 
-class PlaceController < ApplicationController
+class PlacesController < ApplicationController
   def index
     include YelpHelper
     @term = 'dinner'
