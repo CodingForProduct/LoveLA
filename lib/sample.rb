@@ -1,4 +1,3 @@
-require_relative 'metro_rail'
 require_relative 'yelp_helper'
 require 'net/http'
 require 'uri'

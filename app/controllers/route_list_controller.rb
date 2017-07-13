@@ -1,6 +1,3 @@
-require_relative '../../lib/metro_rail'
-require_relative '../../lib/database_mgr'
-
 class RouteListController < ApplicationController
   @routelist = {}
 

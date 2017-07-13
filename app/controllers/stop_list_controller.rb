@@ -1,12 +1,9 @@
-require_relative '../../lib/metro_rail'
-require_relative '../../lib/database_mgr'
 
 class StopListController < ApplicationController
   @stoplist = {}
   def show
     if params[:route_id]
-      @metro = MetroRail.new
-      @stoplist = @metro.get_stop_list(params[:route_id])
+      @stoplist = Stop.where(route_id: params[:route_id])
     end
   end
 
@@ -42,4 +39,5 @@ class StopListController < ApplicationController
   def search_params
     params.require(:route).permit(:route_id, :display_name, :created_at, :updated_at, :route_location)
   end
+
 end

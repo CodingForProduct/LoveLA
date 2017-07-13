@@ -1,0 +1,7 @@
+<%= render 'layouts/navbar' %>
+  <div class="well">
+    <%#= @routelist.display_name %>
+    <% @stoplist.each do |row| %>
+        <%= link_to "#{row['display_name']}", place_path(:longitude =>"#{row['longitude']}", :latitude =>"#{row['latitude']}") %> <br />
+    <% end %>
+  </div>
