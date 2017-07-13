@@ -10,12 +10,6 @@ $navbar-default-bg: #C65D57;
 @brand-warning: #f0ad4e;
 @brand-danger:  #d9534f;
 
-.well {
-  padding-top: 50px;
-  width: 50%;
-  opacity: 80%;
-}
-
 body {
   background-image: asset-url('metro-map.jpg');
   background-size: 100%;
@@ -38,69 +32,69 @@ body {
 }
 
 h1 { 
-    display: block;
-    font-size: 2em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'Raleway';
-    font-weight: 700;
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: 700;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    margin-left: 10px;
-    margin-right: 0;
-    font-family: 'Raleway';
-    font-weight: 600;
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 10px;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: 600;
 }
 
 h3 { 
-    display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'Raleway';
-    font-weight: bold;
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: 400;
 }
 
 h4 { 
-    display: block;
-    font-size: 1em;
-    margin-top: 1.2em;
-    margin-bottom: 1.2em;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'Raleway';
-    font-weight: bold;
+  display: block;
+  font-size: 1em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: bold;
 }
 
 h5 { 
-    display: block;
-    font-size: .83em;
-    margin-top: 1.67em;
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'Raleway';
-    font-weight: bold;
+  display: block;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: bold;
 }
 
 h6 { 
-    display: block;
-    font-size: .67em;
-    margin-top: 2.33em;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'Raleway';
-    font-weight: bold;
+  display: block;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: bold;
 }
 
 .container {
@@ -108,9 +102,15 @@ h6 {
 }
 
 img {
-    background-repeat: no-repeat;
-    max-width: 100%;
-    height: auto;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto;
+}
+
+.well {
+  padding-top: 50px;
+  width: 50%;
+  opacity: 80%;
 }
 
 .route-list-well {
@@ -120,6 +120,20 @@ img {
   word-wrap: break-word;
   padding: 0px;
   margin: 0px;
+}
+
+.stop-list-well {
+  background-color: white;
+  padding: 15px;
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  font-weight: 400;
+  word-wrap: break-word;
 }
 
 .blue-line {
@@ -277,4 +291,3 @@ img {
   and (orientation: landscape) {
 
 }
-

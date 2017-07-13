@@ -11,5 +11,4 @@ class PlacesController < ApplicationController
     @place = search(@term,@longitude,@latitude)
 
    end
-
 end
