@@ -51,9 +51,9 @@ h1 {
 h2 {
     display: block;
     font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 10px;
     margin-right: 0;
     font-family: 'Raleway';
     font-weight: 600;
@@ -107,7 +107,6 @@ h6 {
   font-family: 'Raleway';
 }
 
-
 img {
     background-repeat: no-repeat;
     max-width: 100%;
@@ -119,53 +118,56 @@ img {
   width: 100%;
   background-color: white;
   word-wrap: break-word;
+  padding: 0px;
+  margin: 0px;
 }
 
 .blue-line {
   color: #3579DC;
-  font-size: 3em;
-  margin-top: 0px;
+  font-size: 2em;
+  padding: 0px;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
 .red-line {
   color: #C65D57;
-  font-size: 3em;
-  margin-top: 0px;
+  font-size: 2em;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
 .green-line {
   color: #5cb85c;
-  font-size: 3em;
-  margin-top: 0px;
+  font-size: 2em;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
 .gold-line {
   color: #FF7F24;
-  font-size: 3em;
-  margin-top: 0px;
+  font-size: 2em;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
 .purple-line {
   color: #694489;
-  font-size: 3em;
-  margin-top: 0px;
+  font-size: 2em;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
 .expo-line {
   color: #0198E1;
-  font-size: 3em;
-  margin-top: 0px;
+  font-size: 2em;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
 .route-location {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* ----------- --------------------------- */

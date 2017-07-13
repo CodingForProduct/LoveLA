@@ -3,9 +3,7 @@ class RouteListController < ApplicationController
 
   def index
     @routelists = Route.all
-    if params[:route_id]
-      @stoplist = Stop.where(route_id: params[:route_id])
-    end
+    @stoplist = Stop.where(route_id: params[:route_id])
   end
 
   private
