@@ -5,5 +5,4 @@ class StopsController < ApplicationController
       @stoplist = Stop.where(route_id: params[:route_id])
     end
   end
-
 end
