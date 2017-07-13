@@ -1,4 +1,4 @@
-class StopListController < ApplicationController
+class StopsController < ApplicationController
   @stoplist = {}
   def index
     if params[:route_id]

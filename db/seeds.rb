@@ -53,4 +53,4 @@ jdata = JSON.parse(data)
 jdata['items'].each do |d|
   Stop.create(stop_id: d['id'], route_id: '806', display_name: d['display_name'], longitude: d['longitude'], latitude: d['latitude'])
 end
-# stops = Stop.create([stop_list])
+# stops = Stop.create([stops])

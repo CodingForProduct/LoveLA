@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   @routelist = {}
   @stoplist = {}
 
-  root 'route_list#index'
+  root 'routes#index'
 
-  get '/stop', ':route_id', to: 'stop_list#index'
-  get '/place', ':longitude',':latitude', to: 'place#index'
+  get '/stops', ':route_id', to: 'stops#index'
+  get '/places', ':longitude',':latitude', to: 'places#index'
 
 end

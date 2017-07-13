@@ -1,0 +1,10 @@
+<%= render 'layouts/navbar' %>
+<div class="well">
+  <% if @place.blank? %>
+      <h3>No result found</h3>
+  <% else %>
+      <% @place.each do |row| %>
+          <%= "#{row['name']}" %> <br />
+      <% end %>
+  <% end %>
+</div>

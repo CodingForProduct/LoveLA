@@ -1,4 +1,4 @@
-class RouteListController < ApplicationController
+class RoutesController < ApplicationController
   @routelist = {}
 
   def index
