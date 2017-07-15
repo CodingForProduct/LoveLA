@@ -1,7 +1,11 @@
 require 'net/http'
 require 'json'
+require 'erb'
 
 module YelpHelper
+
+  include ERB::Util
+
   def get_token
     params =  {
         :client_id => ENV['YELP_LOVELA_CLIENT_ID'],
@@ -47,7 +51,8 @@ module YelpHelper
 
   def get_business(id)
     @token = get_token
-    uri = URI("https://api.yelp.com/v3/businesses/#{id}")
+    encoded_id = url_encode(id)
+    uri = URI("https://api.yelp.com/v3/businesses/#{encoded_id}")
     @result = {}
     @business_url = ""
 

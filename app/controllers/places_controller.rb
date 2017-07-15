@@ -14,9 +14,9 @@ class PlacesController < ApplicationController
   end
 
   def show
-
+  #binding.pry
     @business_id = params[:id]
     @business = get_business(@business_id)
-    redirect_to (@business['url'])
+    redirect_to @business['url']
   end
 end
