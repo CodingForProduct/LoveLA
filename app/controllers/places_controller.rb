@@ -11,5 +11,12 @@ class PlacesController < ApplicationController
     @latitude = params[:latitude]
     @place = search(@term,@longitude,@latitude)
 
-   end
+  end
+
+  def show
+
+    @business_id = params[:id]
+    @business = get_business(@business_id)
+    redirect_to (@business['url'])
+  end
 end

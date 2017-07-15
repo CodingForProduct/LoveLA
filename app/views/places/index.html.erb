@@ -3,7 +3,7 @@
       <h3>No result found</h3>
   <% else %>
       <% @place.each do |row| %>
-          <%= "#{row['name']}" %> <br />
+          <%= link_to "#{row['name']}", places_show_path(:id => row['id']) %> <br />
       <% end %>
   <% end %>
 </div>

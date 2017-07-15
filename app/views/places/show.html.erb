@@ -1,0 +1,7 @@
+<div class="well">
+  <% if @business.blank? %>
+      <h3>No result found</h3>
+  <% else %>
+      <%= link_to 'business url', @business['url'] %>
+  <% end %>
+</div>

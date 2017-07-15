@@ -45,5 +45,20 @@ module YelpHelper
     end
   end
 
-end
+  def get_business(id)
+    @token = get_token
+    uri = URI("https://api.yelp.com/v3/businesses/#{id}")
+    @result = {}
+    @business_url = ""
 
+    request = Net::HTTP::Get.new uri
+    request['Authorization'] = "Bearer #{@token}"
+
+    response = Net::HTTP.start(uri.host, uri.port,
+                               :use_ssl => uri.scheme == 'https') do |http|
+      http.request request
+    end
+    @result = JSON.parse(response.body)
+    @business_url = @result.select{|key, hash| key["url"]}
+  end
+end
