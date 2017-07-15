@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root 'routes#index'
 
-  get '/stops',  ':route_id', to: 'stops#index'
-  get '/places', ':longitude',':latitude', to: 'places#index'
+  get '/stops', to: 'stops#index'
+  get '/places', to: 'places#index'
   get '/map', to: 'static_pages#gmap'
 end

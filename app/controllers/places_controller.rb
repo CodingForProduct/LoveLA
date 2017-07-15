@@ -1,10 +1,11 @@
 require_relative '../../lib/yelp_helper'
-require 'net/http'
-require 'uri'
 
 class PlacesController < ApplicationController
+  include YelpHelper
+
   def index
-    include YelpHelper
+    #binding.pry
+
     @term = 'dinner'
     @longitude = params[:longitude]
     @latitude = params[:latitude]
