@@ -4,9 +4,7 @@ class PlacesController < ApplicationController
   include YelpHelper
 
   def index
-    #binding.pry
-
-    @term = 'dinner'
+    @term = params[:term] || 'dinner'
     @longitude = params[:longitude]
     @latitude = params[:latitude]
     @place = search(@term,@longitude,@latitude)
@@ -14,9 +12,13 @@ class PlacesController < ApplicationController
   end
 
   def show
-  #binding.pry
     @business_id = params[:id]
     @business = get_business(@business_id)
     redirect_to @business['url']
+  end
+
+  private
+  def place_params
+    params.require(:place).permit(:term, :longitude, :latitude)
   end
 end

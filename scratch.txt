@@ -4,3 +4,22 @@
 		<% end %>
 	<% end %>
 </h3>
+
+
+
+<%= link_to "#{row['display_name']}", places_path(:longitude =>"#{row['longitude']}", :latitude =>"#{row['latitude']}"), class: "list_data" %> <br />
+
+          <select>
+            <option value="">--select--</option>
+              <% @select_list.each do |row| %>
+                <option class="list_data" value=<%= row %>><%= row %></option>
+              <% end %>
+            </select>
+
+
+
+
+          <% elsif @place.length > 0 %>
+              <% @place.each do |row| %>
+                  <%= link_to "#{row['name']}", places_show_path(:id => row['id']), class: "list_data" %> <br />
+              <% end %>
