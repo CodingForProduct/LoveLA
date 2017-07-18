@@ -1,8 +1,15 @@
 require 'minitest/autorun'
-require 'test_helper'
+require_relative '../test_helper'
 
 class StopTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @stop = Stop.find(1)
+  end
+
+  test "the truth" do
+    #puts @stop['display_name']
+    assert_not @stop['display_name'].nil?
+  end
+
 end
