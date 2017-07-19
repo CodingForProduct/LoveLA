@@ -1,7 +1,13 @@
 <div class="well">
-  <% if @business.blank? %>
-      <h3>No result found</h3>
-  <% else %>
-      <%= link_to 'business url', @business['url'] %>
+  <h1><%= @business_name %></br></h1>
+  Url <%= @business_url %></br>
+  Hours <% @business_hours[0]['open'].each do |hours| %>
+    <%= days = hours.key(1) %></br>
   <% end %>
+  Phone <%= @business_display_phone %></br>
+  Rating <%= @business_rating %></br>
+  Text <%= @business_snippet_text %></br>
+  Image <%= @business_snippet_image_url %></br>
+  Deals <%= @business_deals %></br>
+  Location <%= @business_location %>
 </div>

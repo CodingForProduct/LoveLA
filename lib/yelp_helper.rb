@@ -76,4 +76,13 @@ module YelpHelper
     return @result
   end
 
+
+  def get_business_hours(business)
+    @business_hours = []
+
+    business['hours'].each do |hour|
+      @business_hours << hour
+    end
+  end
+
 end

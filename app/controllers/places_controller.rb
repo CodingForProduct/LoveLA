@@ -14,9 +14,26 @@ class PlacesController < ApplicationController
   end
 
   def show
-  #binding.pry
     @business_id = params[:id]
     @business = get_business(@business_id)
-    redirect_to @business['url']
+    @business_name = @business['name']
+    @business_url = @business['image_url']
+    @business_hours = get_business_hours(@business)
+
+
+    #binding.pry
+    @business_display_phone = @business['display_phone']
+    @business_rating = @business['rating']
+    @business_snippet_text = @business['snippet_text']
+    @business_snippet_image_url = @business['snippet_image_url']
+    @business_deals = @business['deals']
+    @business_location = @business['location.display_address']
   end
+
+#  def show
+#  #binding.pry
+#    @business_id = params[:id]
+#    @business = get_business(@business_id)
+#    redirect_to @business['url']
+#  end
 end
