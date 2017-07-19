@@ -24,6 +24,8 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+gem 'simplecov', '~> 0.12.0', :require => false, :group => :test
+
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
