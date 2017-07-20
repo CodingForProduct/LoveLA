@@ -108,15 +108,26 @@ img {
   height: auto;
 }
 
+.list_data {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.business_data {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
 .well {
   padding-top: 50px;
   width: 75%;
   opacity: 80%;
 }
 
-.list_data {
-  font-size: 20px;
-  font-weight: bold;
+.business_well {
+  padding-top: 50px;
+  width: 75%;
+  background-color: #f5f5f5;
 }
 
 .mapwell {
@@ -145,6 +156,20 @@ img {
   margin-right: 0;
   font-family: 'Raleway';
   font-weight: 400;
+  word-wrap: break-word;
+}
+
+.time-well {
+  background-color: white;
+  padding: 5px;
+  display: block;
+  font-size: 1em;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-bottom: 15px;
+  font-family: 'Raleway';
+  font-weight: 400;
+  width: 80%;
   word-wrap: break-word;
 }
 
@@ -194,6 +219,19 @@ img {
 .route-location {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.restaurant_photo {
+  width: 80%;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.name {
+  color: #2A8E82;
+  font-size: 1.5em;
+  font-family: 'Raleway';
+  font-weight: 700;
 }
 
 /* ----------- --------------------------- */
