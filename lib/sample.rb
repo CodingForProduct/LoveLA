@@ -10,7 +10,7 @@ include YelpHelper
 #   puts "row data: #{row['id']} - #{row['name']}"
 # end
 
-@business = get_business('eureka-tasting-kitchen-hawthorne')
+@business = get_business('kitchen-mouse-los-angeles')
 
 #pp @business # Pretty prints the entire YELP API response
 
@@ -34,17 +34,13 @@ end
 #p get_token
 
 # These are the fields we may want to call
-# @business['url']
+# @business['url'] photo
 # @business['name']
 # @business['hours'][0]['open'][0]['day']
 # @business['display_phone']
 # @business['rating']
-# @business['snippet_text']
-# @business['snippet_image_url']
 # @business['deals']
 # @business['location.display_address'] # Address for this business formatted for display. 
-# ludes all address fields, cross streets and city, state_code, etc.
-# @business['location'] # Location data for this business
 # @business['location.cross_streets'] # Cross streets for this business
 # @business['location.neighborhoods']
 # @business['categories'] # List of category names like: "Breakfast & Brunch", "Bars"
@@ -112,4 +108,31 @@ def categories
   titles.join(', ')
 end
 
-pp days_closed(@business)
+  def format_photos(business)
+    photos = []
+    count = 0
+    photo = business['photos']
+    if photo.size != 0
+      photo.each do |p|
+        @photo = @business['photos'][count]
+        photos << "<%= image_tag(@photo#{count+1}, class: 'restaurant_photo') %><br/>"
+        count += 1
+      end
+      photos
+    end
+  end
+
+  def format_photos2(business)
+    photos = []
+    count = 0
+    photo = business['photos']
+    if photo.size != 0
+      photo.each do |p|
+        photos <<  p
+        count += 1
+      end
+      photos
+    end
+  end
+
+pp format_photos2(@business)
