@@ -11,12 +11,12 @@
   </div>
 
   <div class="col-md-6 business_data">
-    <p>Rating: <%= @rating %> | Price: <%= @price %></p>
-    <p><%= @categories %></p>
-    <p><%= @display_phone %></p>
+    <h3>Rating: <%= @rating %> | Price: <%= @price %> | <%= link_to 'YELP site', "'#{@website}'" %></h3>
+    <h3><%= @categories %></h3>
+    <h3><%= @display_phone %></h3>
 
-    <% if !(@business.include?(@business['name'])) %>
-      <p>No Hours Available</p>
+    <% if @business['hours'] == nil %>
+      <h3>No Hours Available</h3>
     <% else %>
       <div class="time-well">
         <% @hours.each do |day| %>

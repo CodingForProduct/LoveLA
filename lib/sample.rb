@@ -110,11 +110,13 @@ end
 # days.each do |d|
 #   week[d['day']] = "hours #{d[:open]}-#{d[:closed]}"
 # end
-
-
-
-pp !(@business3.include?(@business['name']))
-#pp @business3
+pp @business3['hours']
+pp @business.include?(@business['hours'])
+pp @business2['hours']
+pp @business2.include?(@business['hours'])
+#pp @business2.include?(@business['hours'])
+#pp @business3.include?(@business['hours'])
+#pp @business3['url']
 #pp get_business_hours(@business)
 #pp get_business_hours(@business2)
 #pp get_business_hours(@business3)

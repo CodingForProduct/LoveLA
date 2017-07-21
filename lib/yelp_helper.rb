@@ -30,7 +30,7 @@ module YelpHelper
     @term = term || 'dinner'
     @longitude = longitude
     @latitude = latitude
-    @limit = 20
+    @limit = 10
     @result = {}
     @businesses = []
 
