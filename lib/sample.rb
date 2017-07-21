@@ -11,14 +11,10 @@ include YelpHelper
 # end
 
 @business = get_business('kitchen-mouse-los-angeles')
+@business2 = get_business('the-hungry-pig-los-angeles')
+@business3 = get_business('sharksteeth-los-angeles')
 
 #pp @business # Pretty prints the entire YELP API response
-
-def get_business_hours(business)
-  business
-
-end
-
 
 def get_business_address(business)
   business['location'][0].each do |location|
@@ -46,67 +42,19 @@ end
 # @business['categories'] # List of category names like: "Breakfast & Brunch", "Bars"
 #X = @business['hours'][0]['open'][0]['day']#
 
-
-
 ##  def format_time(time)
 ##    t = (time > 1200) ? ((time - 1200).to_s + "pm") : (time.to_s + "am")
 ##    #t = (time <= 1200) ? (time.to_s + "am") : (time - 1200).to_s + "pm"
 ##    t.insert(-2,":")
 ##  end#
 
-  def format_time(time)
-    if (time === 0000)
-      "Midnight"
-    elsif (time === 1200)
-      "Noon"
-    elsif (time < 1200)
-      (time.to_s + "am").insert(-5,":")
-    else
-      ((time - 1200).to_s + "pm").insert(-5,":")
+  def categories
+    titles = []
+    @business['categories'].each do |category|
+      titles << category['title']
     end
-  end#
-
-def days_closed(business)
-  day_info = business['hours'][0]['open']
-  day_value = business['hours'][0]['open'][0].values[3]
-  days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-  count = 0
-  if (day_info.size < 7)
-    day_info.each do |day|
-      day_value = day.values[3]
-      if day_value == days[count]
-        "Open #{day}"
-      else
-        "Closed #{day}"
-      end
-      count += 1
-    end
+    titles.join(', ')
   end
-end
-
-def get_business_hours(business)
-  day_info = business['hours'][0]['open']
-  days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-  count = 0
-  hours = []#
-  while count <= 6
-    start_time = day_info[count]['start'].to_i
-    end_time = day_info[count]['end'].to_i
-    day = days[count]
-    hours << "#{day} #{format_time(start_time)} - #{format_time(end_time)}"
-    count += 1
-    hours
-  end
-  hours
-end
-
-def categories
-  titles = []
-  @business['categories'].each do |category|
-    titles << category['title']
-  end
-  titles.join(', ')
-end
 
   def format_photos(business)
     photos = []
@@ -122,17 +70,51 @@ end
     end
   end
 
-  def format_photos2(business)
-    photos = []
-    count = 0
-    photo = business['photos']
-    if photo.size != 0
-      photo.each do |p|
-        photos <<  p
-        count += 1
-      end
-      photos
+  def format_time(time)
+    if (time.to_i === 0000)
+      "Midnight"
+    elsif (time.to_i === 1200)
+      "Noon"
+    elsif (time.to_i < 1200)
+      (time.to_s + "am").insert(-5,":")
+    else
+      ((time.to_i - 1200).to_s + "pm").insert(-5,":")
     end
   end
 
-pp format_photos2(@business)
+  def get_business_hours(business)
+    if business['hours'] == nil
+      return
+    else
+      day_info = business['hours'][0]['open']
+      day_names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]    
+
+      hours = Array.new(7)    
+
+      hours.each_with_index do |d,i|
+        hours[i] = "#{day_names[i]} Closed"
+      end    
+
+      day_info.each do |d|
+        start_time = d['start']
+        end_time = d['end']
+        hours[d['day']] = "#{day_names[d['day']]} #{format_time(start_time)}-#{format_time(end_time)}"
+      end
+      hours
+    end
+  end
+
+# ---
+# week = Array.new(7, "closed")
+# 
+# days.each do |d|
+#   week[d['day']] = "hours #{d[:open]}-#{d[:closed]}"
+# end
+
+
+
+pp !(@business3.include?(@business['name']))
+#pp @business3
+#pp get_business_hours(@business)
+#pp get_business_hours(@business2)
+#pp get_business_hours(@business3)

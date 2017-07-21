@@ -8,10 +8,6 @@
         <%= image_tag "#{photo}", class: 'restaurant_photo' %><br/>
       <% end %>
     <% end %>
-
-    <% if @business_is_open_now %>
-      <h3><%= "Open Now" %></h3>
-    <% end %>
   </div>
 
   <div class="col-md-6 business_data">
@@ -19,12 +15,14 @@
     <p><%= @categories %></p>
     <p><%= @display_phone %></p>
 
-    <% if @hours == nil %>
+    <% if !(@business.include?(@business['name'])) %>
+      <p>No Hours Available</p>
+    <% else %>
       <div class="time-well">
         <% @hours.each do |day| %>
           <%= day %></br>
         <% end %>
-    <% end %>
       </div>
+    <% end %>
   </div>
 </div>
