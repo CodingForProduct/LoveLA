@@ -15,7 +15,6 @@ class PlacesController < ApplicationController
   def show
     @id = params[:id]
     @business = get_business(@id)
-    #binding.pry
     @name = @business['name']
     @website = @business['url']
     @hours = get_business_hours(@business)
@@ -23,7 +22,7 @@ class PlacesController < ApplicationController
     @display_phone = @business['display_phone']
     @rating = @business['rating']
     @business_snippet_text = @business['snippet_text']
-    @photo = @business['photos'][0]
+    @photo = format_photos(@business)
     @deals = @business['deals']
     @location = get_business_location
     @coordinates = @business['coordinates']

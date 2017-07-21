@@ -45,4 +45,17 @@ module ApplicationHelper
     titles.join(', ')
   end
 
+  def format_photos(business)
+    photos = []
+    count = 0
+    photo = business['photos']
+    if photo.size != 0
+      photo.each do |p|
+        photos <<  p
+        count += 1
+      end
+      photos
+    end
+  end
+
 end

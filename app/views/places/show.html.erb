@@ -3,7 +3,11 @@
   <hr />
 <div class="row">
   <div class="col-md-6">
-    <%= image_tag(@photo, class: "restaurant_photo") %>
+    <% if @photo.size != 0  %>
+      <% @photo.each do |photo| %>
+        <%= image_tag "#{photo}", class: 'restaurant_photo' %><br/>
+      <% end %>
+    <% end %>
 
     <% if @business_is_open_now %>
       <h3><%= "Open Now" %></h3>
@@ -14,10 +18,13 @@
     <p>Rating: <%= @rating %> | Price: <%= @price %></p>
     <p><%= @categories %></p>
     <p><%= @display_phone %></p>
-    <div class="time-well">
-      <% @hours.each do |day| %>
-        <%= day %></br>
-      <% end %>
-    </div>
+
+    <% if @hours == nil %>
+      <div class="time-well">
+        <% @hours.each do |day| %>
+          <%= day %></br>
+        <% end %>
+    <% end %>
+      </div>
   </div>
 </div>
