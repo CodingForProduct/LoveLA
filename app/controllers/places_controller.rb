@@ -9,7 +9,6 @@ class PlacesController < ApplicationController
     @longitude = params[:longitude]
     @latitude = params[:latitude]
     @place = search(@term,@longitude,@latitude)
-
   end
 
   def show
@@ -26,7 +25,6 @@ class PlacesController < ApplicationController
     @deals = @business['deals']
     @location = get_business_location
     @coordinates = @business['coordinates']
-    @is_open_now = is_open_now?
     @categories = categories
   end
 
