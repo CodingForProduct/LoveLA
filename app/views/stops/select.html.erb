@@ -5,11 +5,11 @@
         <div class="stop-list-well">
           <h1><%= @stop %></h1>
           <h3>Select a category to search</h3>
-          <%= form_for @stop do |f| %>
-            <%= select_tag "places", options_for_select(@select_list) %>
-              <p>
-                <p>
-                  <%= f.submit "ok" %>
+          <%= form_for(@stop, :url => stops_select_path, method: :post) do |f| %>
+            <%= select_tag "term", options_for_select(@select_list) %>
+              <p><%= f.hidden_field :longitude, :value => @longitude %>
+                <p><%= f.hidden_field :latitude, :value => @latitude %>
+                  <%= f.submit "select" %>
                 </p>
               </p>
           <% end %>

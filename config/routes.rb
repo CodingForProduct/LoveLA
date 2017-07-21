@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   post '/stops/select', to: 'places#index'
   get '/places', to: 'places#index'
   get '/map', to: 'static_pages#gmap'
-  get '/places/show', to: 'places#show'
+  #post '/places/show', to: 'places#show'
 
 end
