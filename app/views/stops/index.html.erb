@@ -5,7 +5,7 @@
         <div class="stop-list-well">
           <%#= @routelist.display_name %>
           <% @stoplist.each do |row| %>
-            <%= link_to "#{row['display_name']}", places_path(:longitude =>"#{row['longitude']}", :latitude =>"#{row['latitude']}"), class: "list_data" %> <br />
+            <%= link_to row['display_name'], stops_select_path(:stop => row['id'], :longitude => row['longitude'], :latitude =>row['latitude']), class: "list_data" %> <br />
           <% end %>
         </div><!--div class="route-list-well"-->
       </div><!--div class="well"-->

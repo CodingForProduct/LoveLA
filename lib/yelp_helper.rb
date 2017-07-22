@@ -1,6 +1,7 @@
 require 'net/http'
 require 'json'
 require 'erb'
+require 'pry'
 
 module YelpHelper
 
@@ -49,10 +50,16 @@ module YelpHelper
                                :use_ssl => uri.scheme == 'https') do |http|
       http.request request
     end
+
     @result = JSON.parse(response.body)
-    @result["businesses"].each do |business|
-      @businesses << [business['id'], business['name']]
+    if !@result["businesses"].nil?
+      @result["businesses"].each do |business|
+        @businesses << [business['id'], business['name']]
+      end
+    else
+      @result
     end
+
   end
 
   def get_business(id)
