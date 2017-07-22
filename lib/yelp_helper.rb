@@ -31,9 +31,15 @@ module YelpHelper
     @term = term || 'dinner'
     @longitude = longitude
     @latitude = latitude
-    @limit = 20
+    @limit = 10
     @result = {}
     @businesses = []
+
+    if !(ENV.key? 'YELP_LOVELA_CLIENT_ID' and
+         ENV.key? 'YELP_LOVELA_CLIENT_SECRET' and
+         ENV.key? 'YELP_LOVELA_ACCESS_TOKEN')
+      raise "YELP ENV unset"
+    end
 
     uri = URI("https://api.yelp.com/v3/businesses/search?term=#{@term}&longitude=#{@longitude}&latitude=#{@latitude}&limit=#{@limit}")
 
@@ -66,11 +72,24 @@ module YelpHelper
     request = Net::HTTP::Get.new uri
     request['Authorization'] = "Bearer #{@token}"
 
-    response = Net::HTTP.start(uri.host, uri.port,
-                               :use_ssl => uri.scheme == 'https') do |http|
-      http.request request
-    end
+    response = Net::HTTP.start(
+      uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+        http.request request
+      end
+
     @result = JSON.parse(response.body)
-    @business_url = @result.select{|key, hash| key["url"]}
+    #@business_url = @result.select{|key, hash| key["url"]}
+
+    return @result
   end
+
+
+  def get_business_hours(business)
+    @business_hours = []
+
+    business['hours'].each do |hour|
+      @business_hours << hour
+    end
+  end
+
 end

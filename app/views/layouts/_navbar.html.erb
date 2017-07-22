@@ -8,21 +8,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">LoveLA</a>
+        <%= link_to image_tag("sm_logo.png", alt: "LoveLA"), '/', class: 'navbar-brand' %>
+      <ul class="nav navbar-nav navbar-left">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'MAP', static_pages_gmap_path %></li>
+          <li><%= link_to 'Lyft', 'https://www.lyft.com/cities/los-angeles-ca' %></li>
+        </ul>
+      </ul>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-
       <ul class="nav navbar-nav navbar-right">
-
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'MAP', static_pages_gmap_path %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metro Info<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Fares', 'https://www.metro.net/riding/fares' %></li>
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metro Info<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Fares', 'https://www.metro.net/riding/fares' %></li>
               <li role='separator' class='divider'></li>
               <li><%= link_to 'Tap Cards', 'https://www.taptogo.net/' %></li>
               <li role='separator' class='divider'></li>
@@ -31,9 +34,9 @@
               <li><%= link_to 'Bike Share', 'https://bikeshare.metro.net/' %></li>
               <li role='separator' class='divider'></li>
               <li><%= link_to 'Metro Art Tours', 'https://www.metro.net/about/art/' %></li>
-          </ul>
-        </li>
-      </ul>
+            </ul><!--ul class="dropdown-menu"-->
+          </li><!--li class="dropdown"-->
+        </ul><!--ul class="nav navbar-nav"-->
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Real-time Transit Info<span class="caret"></span></a>
@@ -41,9 +44,10 @@
             <li><%= link_to 'LA Metro Rail', 'http://www.nextbus.com/#!/lametro-rail/801/801_0_var0/80101_0' %></li>
             <li role='separator' class='divider'></li>
             <li><%= link_to 'La Metro Bus', 'http://www.nextbus.com/#!/lametro/92/92_189_1/10746/3587' %></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+          </ul><!--ul class="dropdown-menu"-->
+        </li><!--li class="dropdown"-->
+
+      </ul><!--ul class="nav navbar-nav navbar-right"-->
+    </div><!--div class="collapse navbar-collapse"-->
+  </div><!--div class="container"-->
+</nav><!--nav class="navbar navbar-default navbar-fixed-top"-->

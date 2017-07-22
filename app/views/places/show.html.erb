@@ -1,7 +1,28 @@
-<div class="well">
-  <% if @business.blank? %>
-      <h3>No result found</h3>
-  <% else %>
-      <%= link_to 'business url', @business['url'] %>
-  <% end %>
+<div class = 'container business_well'>
+  <h2><span class='name'><%= @name %></span> <%= @location %></h2>
+  <hr />
+<div class="row">
+  <div class="col-md-6">
+    <% if @photo.size != 0  %>
+      <% @photo.each do |photo| %>
+        <%= image_tag "#{photo}", class: 'restaurant_photo' %><br/>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6 business_data">
+    <h3>Rating: <%= @rating %> | Price: <%= @price %> | <%= link_to 'YELP site', "'#{@website}'" %></h3>
+    <h3><%= @categories %></h3>
+    <h3><%= @display_phone %></h3>
+
+    <% if @business['hours'] == nil %>
+      <h3>No Hours Available</h3>
+    <% else %>
+      <div class="time-well">
+        <% @hours.each do |day| %>
+          <%= day %></br>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
