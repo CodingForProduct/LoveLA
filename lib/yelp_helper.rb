@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 require 'erb'
-require 'pry'
+
 
 module YelpHelper
 
