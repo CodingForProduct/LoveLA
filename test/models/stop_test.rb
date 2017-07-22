@@ -4,7 +4,7 @@ require_relative '../test_helper'
 class StopTest < ActiveSupport::TestCase
 
   def setup
-    @stop = Stop.find(1)
+    @stop = Stop.first
   end
 
   test "the truth" do

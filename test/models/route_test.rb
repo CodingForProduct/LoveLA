@@ -4,7 +4,7 @@ require_relative '../test_helper'
 class RouteTest < ActiveSupport::TestCase
 
   def setup
-    @route = Route.find(1)
+    @route = Route.first
   end
 
   test "the truth" do
