@@ -18,6 +18,7 @@
     <% if @business['hours'] == nil %>
       <h3>No Hours Available</h3>
     <% else %>
+    <h2 >Hours</h2>
       <div class="time-well">
         <% @hours.each do |day| %>
           <%= day %></br>
