@@ -8,9 +8,9 @@ class StopsController < ApplicationController
   end
 
   def select
-    @stop = params[:stop]
-    @longitude = Stop.select(:longitude).where(display_name: @stop)
-    @latitude = Stop.select(:latitude).where(display_name: @stop)
+    @stop = Stop.find_by_id(params[:stop]) #= params[:stop]
+    @longitude = params[:longitude] #Stop.select(:longitude).where(display_name: @stop)
+    @latitude = params[:latitude] #Stop.select(:latitude).where(display_name: @stop)
     @select_list = ['food','bars','theatres','libraries','grocers','parks','entertainment','museums','malls' ]
   end
 

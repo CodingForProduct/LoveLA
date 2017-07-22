@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   get '/stops/select', to: 'stops#select'
   post '/stops/select', to: 'places#index'
   get '/places', to: 'places#index'
+  get '/places/:id', to: 'places#show', as: :places_show
   get '/map', to: 'static_pages#gmap'
+
   #post '/places/show', to: 'places#show'
 
 end

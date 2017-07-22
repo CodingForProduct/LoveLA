@@ -7,7 +7,7 @@
               <h3>No result found</h3>
           <% else %>
               <% @place.each do |row| %>
-                  <%= link_to "#{row['name']}", places_show_path(:id => row['id']), class: "list_data" %> <br />
+                  <%= link_to "#{row['name']}", places_show_path(row['id']), class: "list_data" %> <br />
               <% end %>
           <% end %>
         </div><!--div class="route-list-well"-->

@@ -1,12 +1,12 @@
-require_relative '../../lib/yelp_helper'
+#require_relative '../../lib/yelp_helper'
 
 class PlacesController < ApplicationController
-  include YelpHelper
+  #include YelpHelper
 
   def index
     @term = params[:term] || 'dinner'
-    @longitude = params[:longitude]
-    @latitude = params[:latitude]
+    @longitude = params[:stop][:longitude]
+    @latitude = params[:stop][:latitude]
     @place = search(@term,@longitude,@latitude)
 
   end
