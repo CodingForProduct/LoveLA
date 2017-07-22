@@ -9,7 +9,7 @@
             <%= select_tag "term", options_for_select(@select_list) %>
               <p><%= f.hidden_field :longitude, :value => @longitude %>
                 <p><%= f.hidden_field :latitude, :value => @latitude %>
-                  <%= f.submit "select", class: "btn btn-primary btn-sm" %>
+                  <%= f.submit "select", class: "btn btn-primary" %>
                 </p>
               </p>
           <% end %>
