@@ -14,12 +14,6 @@ class StopsController < ApplicationController
     @select_list = ['food','bars','theatres','libraries','grocers','parks','entertainment','museums','malls' ]
   end
 
-  def get_places
-
-  end
-
-
-
   private
   def stop_params
     params.require(:stop).permit(:term, :longitude, :latitude)
