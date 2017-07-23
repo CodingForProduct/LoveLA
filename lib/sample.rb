@@ -1,5 +1,5 @@
 require_relative 'yelp_helper'
-# require 'pp'
+require 'pp'
 
 include YelpHelper
 @term = 'food'
@@ -8,19 +8,7 @@ include YelpHelper
 
 @place = search(@term,@longitude,@latitude)
 
-# @place.each do |row|
-#   puts "name: #{row['name']}, id: #{row['id']} "
-# end
-
-# @place = search(@term,@longitude,@latitude)
-# @place.each do |row|
-#   puts "row data: #{row['id']} - #{row['name']}"
-# end
-
-# @business = get_business('kitchen-mouse-los-angeles')
-#  @business2 = get_business('the-hungry-pig-los-angeles')
- @business3 = get_business('sharksteeth-los-angeles')
-
+@business = get_business('eggslut-los-angeles-5')
 #pp @business # Pretty prints the entire YELP API response
 
 def get_business_address(business)
@@ -29,7 +17,7 @@ def get_business_address(business)
   end
 end
 
-#pp @business # Pretty prints the entire YELP API response
+pp @business # Pretty prints the entire YELP API response
 #pp @business['photos'][0]
 #pp get_business_address(@business)
 #pp get_business_hours(@business)
@@ -111,7 +99,8 @@ end
     end
   end
 
-bus_rating = @business3['rating']
-
-display_rating = show_rating(bus_rating)
-puts display_rating
+#puts @business
+#bus_rating = @business3['rating']
+#
+# display_rating = show_rating(bus_rating)
+# puts display_rating

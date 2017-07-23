@@ -51,6 +51,7 @@ module YelpHelper
       http.request request
     end
 
+    #puts @result.inspect
     @result = JSON.parse(response.body)
     if !@result["businesses"].nil?
       @result["businesses"].each do |business|
@@ -77,7 +78,12 @@ module YelpHelper
         http.request request
       end
 
-    @result = JSON.parse(response.body)
+    if response.is_a?(Net::HTTPSuccess)
+      @result = JSON.parse(response.body)
+    else
+      @result = {}
+    end
+
     #@business_url = @result.select{|key, hash| key["url"]}
 
     return @result
@@ -85,6 +91,7 @@ module YelpHelper
 
 
   def get_business_hours(business)
+
     @business_hours = []
 
     business['hours'].each do |hour|
