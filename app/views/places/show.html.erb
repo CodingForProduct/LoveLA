@@ -11,7 +11,8 @@
     </div>
 
     <div class="col-md-6 business_data">
-      <h3>Rating: <%= @rating %> | Price: <%= @price %> | <%= link_to 'YELP site', "#{@website}", target: '_blank' %></h3>
+      <% show_stars = show_rating(@rating) %>
+      <h3><%=image_tag(show_stars, alt: "", class: 'dock-item') %> | Price: <%= @price %> | <%= link_to image_tag('Yelp_trademark_RGB.png', class: 'yelp_logo'), "#{@website}", target: '_blank' %></h3>
       <h3><%= @categories %></h3>
       <h3><%= @display_phone %></h3>
 
