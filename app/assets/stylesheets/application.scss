@@ -21,7 +21,8 @@ body {
 .navbar-default .navbar-brand {
   color: white;
   font-weight: 700;
-  padding: 0px;
+  padding-left: 20px;
+  padding-top: 0px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -232,6 +233,17 @@ img {
   font-size: 1.5em;
   font-family: 'Raleway';
   font-weight: 700;
+}
+
+.motto {
+  color: white;
+  font-size: 1.65em;
+  font-family: 'Raleway';
+  font-weight: 500;
+}
+
+.menu_font {
+  font-size: 1.5em;
 }
 
 .yelp_logo {

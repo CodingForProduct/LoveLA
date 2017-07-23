@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -9,37 +9,37 @@
         <span class="icon-bar"></span>
       </button>
         <%= link_to image_tag("sm_logo.png", alt: "LoveLA"), '/', class: 'navbar-brand' %>
+        <span class="motto">Ditch the gridlock with LA Metro Rail!</span>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
       <ul class="nav navbar-nav navbar-right">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metro Info<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle menu_font" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metro Info<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to 'MAP', static_pages_gmap_path %></li>
+              <li><%= link_to 'MAP', static_pages_gmap_path, class: 'menu_font' %></li>
               <li role='separator' class='divider'></li>
-              <li><%= link_to 'Fares', 'https://www.metro.net/riding/fares' %></li>
+              <li><%= link_to 'Fares', 'https://www.metro.net/riding/fares', class: 'menu_font' %></li>
               <li role='separator' class='divider'></li>
-              <li><%= link_to 'Tap Cards', 'https://www.taptogo.net/' %></li>
+              <li><%= link_to 'Tap Cards', 'https://www.taptogo.net/', class: 'menu_font' %></li>
               <li role='separator' class='divider'></li>
-              <li><%= link_to 'Trip Planner', 'https://www.metro.net/riding/trip-planner/' %></li>
+              <li><%= link_to 'Trip Planner', 'https://www.metro.net/riding/trip-planner/', class: 'menu_font' %></li>
               <li role='separator' class='divider'></li>
-              <li><%= link_to 'Bike Share', 'https://bikeshare.metro.net/' %></li>
+              <li><%= link_to 'Bike Share', 'https://bikeshare.metro.net/', class: 'menu_font' %></li>
               <li role='separator' class='divider'></li>
-              <li><%= link_to 'Metro Art Tours', 'https://www.metro.net/about/art/' %></li>
+              <li><%= link_to 'Metro Art Tours', 'https://www.metro.net/about/art/', class: 'menu_font' %></li>
             </ul><!--ul class="dropdown-menu"-->
           </li><!--li class="dropdown"-->
         </ul><!--ul class="nav navbar-nav"-->
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Real-time Transit Info<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle menu_font" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Real-time Transit Info<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to 'LA Metro Rail', 'http://www.nextbus.com/#!/lametro-rail/801/801_0_var0/80101_0' %></li>
+            <li><%= link_to 'LA Metro Rail', 'http://www.nextbus.com/#!/lametro-rail/801/801_0_var0/80101_0', class: 'menu_font' %></li>
             <li role='separator' class='divider'></li>
-            <li><%= link_to 'La Metro Bus', 'http://www.nextbus.com/#!/lametro/92/92_189_1/10746/3587' %></li>
+            <li><%= link_to 'La Metro Bus', 'http://www.nextbus.com/#!/lametro/92/92_189_1/10746/3587', class: 'menu_font' %></li>
           </ul><!--ul class="dropdown-menu"-->
         </li><!--li class="dropdown"-->
 
