@@ -9,6 +9,5 @@
 
 + Ruby version -2.3.0
 + Rails 5
-+ React
 + PostgreSQl
 + Rails Tests Minitest
