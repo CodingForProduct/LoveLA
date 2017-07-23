@@ -150,4 +150,16 @@ module YelpHelper
       photos
     end
   end
+
+  def show_rating(rating)
+    display_rating = ''
+    base_file = 'small_'
+    half = '_half'
+    file_ext = '.png'
+    rating_str = rating.to_s
+    (rating_str.include? '.5') ?
+          display_rating = "#{base_file}#{rating_str.tr('.5','')}#{half}#{file_ext}":
+        display_rating = "#{base_file}#{rating_str.tr('.0','')}#{file_ext}" if rating_str.length > 0
+    display_rating
+  end
 end

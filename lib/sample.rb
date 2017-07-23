@@ -8,9 +8,9 @@ include YelpHelper
 
 @place = search(@term,@longitude,@latitude)
 
-@place.each do |row|
-  puts "name: #{row['name']}, id: #{row['id']} "
-end
+# @place.each do |row|
+#   puts "name: #{row['name']}, id: #{row['id']} "
+# end
 
 # @place = search(@term,@longitude,@latitude)
 # @place.each do |row|
@@ -18,8 +18,8 @@ end
 # end
 
 # @business = get_business('kitchen-mouse-los-angeles')
-# @business2 = get_business('the-hungry-pig-los-angeles')
-# @business3 = get_business('sharksteeth-los-angeles')
+#  @business2 = get_business('the-hungry-pig-los-angeles')
+ @business3 = get_business('sharksteeth-los-angeles')
 
 #pp @business # Pretty prints the entire YELP API response
 
@@ -111,19 +111,7 @@ end
     end
   end
 
-# ---
-# week = Array.new(7, "closed")
-# 
-# days.each do |d|
-#   week[d['day']] = "hours #{d[:open]}-#{d[:closed]}"
-# end
-# pp @business3['hours']
-# pp @business.include?(@business['hours'])
-# pp @business2['hours']
-# pp @business2.include?(@business['hours'])
-#pp @business2.include?(@business['hours'])
-#pp @business3.include?(@business['hours'])
-#pp @business3['url']
-#pp get_business_hours(@business)
-#pp get_business_hours(@business2)
-#pp get_business_hours(@business3)
+bus_rating = @business3['rating']
+
+display_rating = show_rating(bus_rating)
+puts display_rating
