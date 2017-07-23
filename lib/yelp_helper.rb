@@ -35,11 +35,11 @@ module YelpHelper
     @result = {}
     @businesses = []
 
-    if !(ENV.key? 'YELP_LOVELA_CLIENT_ID' and
-         ENV.key? 'YELP_LOVELA_CLIENT_SECRET' and
-         ENV.key? 'YELP_LOVELA_ACCESS_TOKEN')
-      raise "YELP ENV unset"
-    end
+    # if !(ENV.key? 'YELP_LOVELA_CLIENT_ID' and
+    #      ENV.key? 'YELP_LOVELA_CLIENT_SECRET' and
+    #      ENV.key? 'YELP_LOVELA_ACCESS_TOKEN')
+    #   raise "YELP ENV unset"
+    # end
 
     uri = URI("https://api.yelp.com/v3/businesses/search?term=#{@term}&longitude=#{@longitude}&latitude=#{@latitude}&limit=#{@limit}")
 
