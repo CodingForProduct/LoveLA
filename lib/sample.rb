@@ -1,5 +1,5 @@
 require_relative 'yelp_helper'
-require 'pp'
+# require 'pp'
 
 include YelpHelper
 @term = 'food'
@@ -17,9 +17,9 @@ end
 #   puts "row data: #{row['id']} - #{row['name']}"
 # end
 
-@business = get_business('kitchen-mouse-los-angeles')
-@business2 = get_business('the-hungry-pig-los-angeles')
-@business3 = get_business('sharksteeth-los-angeles')
+# @business = get_business('kitchen-mouse-los-angeles')
+# @business2 = get_business('the-hungry-pig-los-angeles')
+# @business3 = get_business('sharksteeth-los-angeles')
 
 #pp @business # Pretty prints the entire YELP API response
 
@@ -117,10 +117,10 @@ end
 # days.each do |d|
 #   week[d['day']] = "hours #{d[:open]}-#{d[:closed]}"
 # end
-pp @business3['hours']
-pp @business.include?(@business['hours'])
-pp @business2['hours']
-pp @business2.include?(@business['hours'])
+# pp @business3['hours']
+# pp @business.include?(@business['hours'])
+# pp @business2['hours']
+# pp @business2.include?(@business['hours'])
 #pp @business2.include?(@business['hours'])
 #pp @business3.include?(@business['hours'])
 #pp @business3['url']
