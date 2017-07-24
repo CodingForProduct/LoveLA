@@ -1,17 +1,21 @@
 require 'test_helper'
-require 'yelp_helper'
 
 class PlacesTest < ActionDispatch::IntegrationTest
-include YelpHelper
 
-  # test "should get places index" do
-  #   #get places_url
-  #   #assert_response :success
-  #   @latitude = "-34.0626999"
-  #   @longitude = "-118.29008"
-  #   @term = "food"
-  #   @place = search(@term, @longitude, @latitude)
-  #   puts "place: #{@place}"
-  #   assert true
-  # end
+  def setup
+    @id = 'burgerlords-los-angeles'
+    @stop = Stop.find_by_id(24)
+  end
+
+  test 'should get places index' do
+
+    #post stops_select_path, params: { stop: @stop, term: "food", longitude: -118.23425, latitude: 34.0561999 }
+    #assert_select "h1", "Top Ten Results"
+  end
+
+  test 'should get places show' do
+
+    #post places_show_path, params = {id: @id}
+    #assert_select "h2", "Hours"
+  end
 end

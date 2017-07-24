@@ -23,3 +23,10 @@
               <% @place.each do |row| %>
                   <%= link_to "#{row['name']}", places_show_path(:id => row['id']), class: "list_data" %> <br />
               <% end %>
+
+
+              Deprecated style:
+              get "/profile", { id: 1 }, { "X-Extra-Header" => "123" }
+
+              New keyword style:
+              get "/profile", params: { id: 1 }, headers: { "X-Extra-Header" => "123" }

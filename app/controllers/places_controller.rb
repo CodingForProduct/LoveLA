@@ -1,3 +1,4 @@
+
 class PlacesController < ApplicationController
 
   def index
@@ -13,7 +14,7 @@ class PlacesController < ApplicationController
     if @business.nil? || @business.empty?
       @name = 'Request Not Found'
     else
-      @id = params[:id]
+      @id = @business_id  #params[:id]
       @business = get_business(@id)
       @name = @business['name']
       @website = @business['url']

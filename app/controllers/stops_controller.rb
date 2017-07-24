@@ -1,6 +1,5 @@
 class StopsController < ApplicationController
-  @stoplist = {}
-  @params = {}
+
   def index
     if params[:route_id]
       @route = Route.find_by_route_id(params[:route_id])
