@@ -4,9 +4,9 @@ rvm:
 env:
   - DB=postgresql
 before_script:
- psql -c "create role lovela with login password 'lovela';" -U lovela
+ - psql -c 'create database lovela_test;' -U postgres
 script:
- - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
+ - RAILS_ENV=test bundle exec rake db:migrate --trace
  - bundle exec rake db:test:prepare
 #before_script:
 #  - psql -c 'create database lovela_test'
