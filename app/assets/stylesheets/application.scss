@@ -33,7 +33,7 @@ body {
   color: #000;
 }
 
-h1 { 
+h1 {
   display: block;
   font-size: 2em;
   margin-top: 0.67em;
@@ -55,7 +55,7 @@ h2 {
   font-weight: 600;
 }
 
-h3 { 
+h3 {
   display: block;
   font-size: 1.17em;
   margin-top: 1em;
@@ -66,7 +66,7 @@ h3 {
   font-weight: 400;
 }
 
-h4 { 
+h4 {
   display: block;
   font-size: 1em;
   margin-top: 1.2em;
@@ -77,7 +77,7 @@ h4 {
   font-weight: bold;
 }
 
-h5 { 
+h5 {
   display: block;
   font-size: .83em;
   margin-top: 1.67em;
@@ -88,7 +88,7 @@ h5 {
   font-weight: bold;
 }
 
-h6 { 
+h6 {
   display: block;
   font-size: .67em;
   margin-top: 2.33em;
@@ -146,6 +146,15 @@ img {
   margin: 0px;
 }
 
+.route-list-well-mobile {
+  padding-top: 5px;
+  width:80%;
+  background-color: white;
+  word-wrap: break-word;
+  padding: 0px;
+  margin: 0px;
+}
+
 .stop-list-well {
   background-color: white;
   padding: 15px;
@@ -182,12 +191,28 @@ img {
   margin-bottom: 0px;
 }
 
+.blue-line-mobile {
+  color: #3579DC;
+  font-size: 4em;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
 .red-line {
   color: #C65D57;
   font-size: 2em;
   margin-top: 5px;
   margin-bottom: 0px;
 }
+
+.red-line-mobile {
+  color: #C65D57;
+  font-size: 4em;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
 
 .green-line {
   color: #5cb85c;
@@ -196,9 +221,24 @@ img {
   margin-bottom: 0px;
 }
 
+.green-line-mobile {
+  color: #5cb85c;
+  font-size: 4em;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+
 .gold-line {
   color: #FF7F24;
   font-size: 2em;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.gold-line-mobile {
+  color: #FF7F24;
+  font-size: 4em;
   margin-top: 5px;
   margin-bottom: 0px;
 }
@@ -210,9 +250,23 @@ img {
   margin-bottom: 0px;
 }
 
+.purple-line-mobile {
+  color: #694489;
+  font-size: 4em;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
 .expo-line {
   color: #0198E1;
   font-size: 2em;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.expo-line-mobile {
+  color: #0198E1;
+  font-size: 4em;
   margin-top: 5px;
   margin-bottom: 0px;
 }
@@ -252,7 +306,7 @@ img {
 }
 
 /* ----------- --------------------------- */
-/* MEDIA QUERIES https://v4-alpha.getbootstrap.com/layout/overview/ */ 
+/* MEDIA QUERIES https://v4-alpha.getbootstrap.com/layout/overview/ */
 
 /*@include media-breakpoint-up(xs) { ... }*/
 /*@include media-breakpoint-up(sm) { ... }*/
@@ -268,7 +322,7 @@ img {
 /*}*/
 
 /* Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -279,7 +333,7 @@ img {
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
@@ -287,7 +341,7 @@ img {
 }
 
 /* Portrait */
-@media only screen 
+@media only screen
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -295,7 +349,7 @@ img {
 }
 
 /* Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -306,7 +360,7 @@ img {
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
@@ -314,7 +368,7 @@ img {
 }
 
 /* Portrait */
-@media only screen 
+@media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -323,7 +377,7 @@ img {
 }
 
 /* Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -334,7 +388,7 @@ img {
 /* ----------- iPhone 6+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
@@ -342,7 +396,7 @@ img {
 }
 
 /* Portrait */
-@media only screen 
+@media only screen
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
@@ -351,7 +405,7 @@ img {
 }
 
 /* Landscape */
-@media only screen 
+@media only screen
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
