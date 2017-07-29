@@ -4,7 +4,8 @@ class PlacesTest < ActionDispatch::IntegrationTest
 
   def setup
     @id = 'burgerlords-los-angeles'
-    @stop = Stop.find_by_id(24)
+    # @stop = Stop.find_by_id(24)
+    @stop = create(:stop)
     @stop = { id: 24, longitude: -118.23425, latitude: 34.0561999 }
   end
 
