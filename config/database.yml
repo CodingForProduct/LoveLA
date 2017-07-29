@@ -47,8 +47,6 @@ development:
 test:
   <<: *default
   database: lovela
-  username: lovela
-  password: lovela
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -71,6 +69,6 @@ test:
 #
 production:
   <<: *default
-  database: LoveLA_production
-  username: LoveLA
+  database: lovela
+  username: lovela
   password: <%= ENV['LOVELA_DATABASE_PASSWORD'] %>
