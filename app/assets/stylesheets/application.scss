@@ -412,3 +412,13 @@ img {
   and (orientation: landscape) {
 
 }
+
+@media (max-width: 767px) {
+  .well {
+    width: 100% !important;
+  }
+  .business_well {
+    width: 100% !important;
+  }
+}
+
