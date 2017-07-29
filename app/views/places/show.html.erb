@@ -2,7 +2,7 @@
   <h2><span class='name'><%= @name %></span> <%= @location %></h2>
   <hr />
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-sm-12 col-md-6">
       <% if !@photo.nil? && !@photo.empty? %>
         <% if @photo.size != 0  %>
           <% @photo.each do |photo| %>
@@ -13,7 +13,7 @@
 
     </div>
 
-    <div class="col-md-6 business_data">
+    <div class="col-sm-12 col-md-6 business_data">
       <% if !@rating.nil? %>
         <% show_stars = show_rating(@rating) %>
         <h3><%=image_tag(show_stars, alt: "", class: 'dock-item') %> | Price: <%= @price %> | <%= link_to image_tag('Yelp_trademark_RGB.png', class: 'yelp_logo'), "#{@website}", target: '_blank' %></h3>
