@@ -3,6 +3,8 @@ rvm:
 - 2.3.0
 env:
   - DB=postgresql
+before_script:
+ - RAILS_ENV=test psql -c "CREATE USER lovela WITH PASSWORD lovela"
 script:
  - RAILS_ENV=test bundle exec rake db:create --trace
  - RAILS_ENV=test bundle exec rake db:migrate --trace
