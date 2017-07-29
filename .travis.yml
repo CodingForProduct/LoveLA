@@ -13,6 +13,7 @@ before_script:
  - cp config/database.yml.travis config/database.yml
  - psql -c 'create database lovela_test;' -U postgres
 deploy:
+  provider: heroku
   api_key:
     secure: w1ciwwebTHi0jj4xtHm+dP7sj/8zVMfuTdjnNcLkHdzh4pIN2GL41Fj/9crk8cOQhepTVcB60fuA/v22uYS732wR3VLgokxOJyBhln9dEJn4HuJp8iX4egz0/ZbEKtK70ZI5cjW+f4Ia3MXZZGpnlGaOjFUzx303TOB6wkq4HJvHDdrRfuG6lfDMs/DFFlJI/dE3PwRSV5Uqqk7qY6dwIJu5GfeIQymkxCtdljZPjNG05RmJX0Kb8sUzMxnyPhe1S5kOEbs8PX1e3jTlIYfsMvC3Z/jliyr9Tnv2DTLBZMSzT8Hcf3Zhal3aDojCHSqoEj0qm6wHuGg+HVo8QjjrINyPnLWUAwL4QLOP7rAwnGGJPbKl6Pdr03BS5RFgjFZqc/KKgCx8Gs6EwTC/ZlBf66eR7Dyus07R+b5tSsHHy12aXvMCFRq6gbw64Yb1bETsYgn3tmdyRngfQ2cEmwe1vggVclfn/VlY069OTwdNy3STpVZ+YGC1qPsOskB1cLPtahv3BH3JqKSo7s8uO0lVu656YVA5lp27h+Ooa31No7N7wAqnjNWhF9q4spqSF+2bb0Z6t/BodGySlkwnfAMIMiGooUQX2hOx2rdosT9Z1ULK7dOjTmoIPQXMo3iBjboQj9Ntozg5r3ypw4xi0pdkV1d42/mZYVsSplhwfJtnCJ0=
   app: lovela
