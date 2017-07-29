@@ -79,4 +79,4 @@ test:
   <<: *default
   database: lovela_test
   username: lovela
-  password: <%= ENV['LOVELA_DATABASE_PASSWORD'] %>
+  password: lovela
