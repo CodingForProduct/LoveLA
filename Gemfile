@@ -22,6 +22,8 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 gem 'simplecov', '~> 0.12.0', :require => false, :group => :test

@@ -1,13 +1,13 @@
 require 'minitest/autorun'
-require_relative '../test_helper'
+require 'test_helper'
 
 class RouteTest < ActiveSupport::TestCase
 
   def setup
-    @route = Route.first
+    @route = create(:route)
   end
 
-  test "the truth" do
+  test "should get route" do
     #puts @route['display_name']
     assert_not @route['display_name'].nil?
   end
