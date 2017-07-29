@@ -12,7 +12,7 @@ development:
   database: lovela
   pool:
   username: lovela
-  password: lovela
+  password: <%= ENV['LOVELA_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
