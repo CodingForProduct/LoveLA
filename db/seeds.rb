@@ -7,8 +7,8 @@ routes = Route.create([{ route_id: '801', display_name: 'Blue Line', route_locat
                        { route_id: '802', display_name: 'Red Line', route_location: 'North Hollywood to Union Station' },
                        { route_id: '803', display_name: 'Green Line', route_location: 'Redondo Beach to Norwalk' },
                        { route_id: '804', display_name: 'Gold Line', route_location: 'East Los Angeles to Azusa' },
-                       { route_id: '805', display_name: 'Purple Line', route_location: 'Purple Line' },
-                       { route_id: '806', display_name: 'Expo Line', route_location: 'Expo Line' }])
+                       { route_id: '805', display_name: 'Purple Line', route_location: 'Downtown to Mid-Wilshire/Koreatown' },
+                       { route_id: '806', display_name: 'Expo Line', route_location: 'Downtown to Santa Monica' }])
 
 # reads from each stop file to populate stops table
 require 'json'
