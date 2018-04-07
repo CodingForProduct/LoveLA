@@ -9,7 +9,6 @@ class StopTest < ActiveSupport::TestCase
   end
 
   test "should get stop" do
-    #puts @stop['display_name']
     assert_not @stop['display_name'].nil?
   end
 

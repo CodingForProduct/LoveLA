@@ -7,22 +7,7 @@ module YelpHelper
   include ERB::Util
 
   def get_token
-    params =  {
-        :client_id => ENV['YELP_LOVELA_CLIENT_ID'],
-        :client_secret => ENV['YELP_LOVELA_CLIENT_SECRET'],
-        :grant_type=> 'client_credentials'
-    }
-
-    uri = URI('https://api.yelp.com/oauth2/token')
-    uri.query = URI.encode_www_form([["q", "ruby"], ["lang", "en"]])
-
-    response = Net::HTTP.post_form( uri, params )
-    if( response.is_a?( Net::HTTPSuccess ))
-      @return_msg = JSON.parse(response.body)
-      @return_msg['access_token']
-    else
-      @return_msg = 'request failed'
-    end
+    ENV['YELP_LOVELA_ACCESS_TOKEN']
   end
 
   def search(term, longitude, latitude)
@@ -34,12 +19,6 @@ module YelpHelper
     @result = {}
     @businesses = []
 
-    # if !(ENV.key? 'YELP_LOVELA_CLIENT_ID' and
-    #      ENV.key? 'YELP_LOVELA_CLIENT_SECRET' and
-    #      ENV.key? 'YELP_LOVELA_ACCESS_TOKEN')
-    #   raise "YELP ENV unset"
-    # end
-
     uri = URI("https://api.yelp.com/v3/businesses/search?term=#{@term}&longitude=#{@longitude}&latitude=#{@latitude}&limit=#{@limit}")
 
     request = Net::HTTP::Get.new uri
@@ -50,7 +29,6 @@ module YelpHelper
       http.request request
     end
 
-    #puts @result.inspect
     @result = JSON.parse(response.body)
     if !@result["businesses"].nil?
       @result["businesses"].each do |business|
@@ -83,27 +61,16 @@ module YelpHelper
       @result = {}
     end
 
-    #@business_url = @result.select{|key, hash| key["url"]}
-
     return @result
   end
 
 
-  def get_business_hours(business)
-
-    @business_hours = []
-
-    business['hours'].each do |hour|
-      @business_hours << hour
-    end
-  end
-
   def format_time(time)
-    if (time.to_i === 0000)
+    if time.to_i === 0000
       "Midnight"
-    elsif (time.to_i === 1200)
+    elsif time.to_i === 1200
       "Noon"
-    elsif (time.to_i < 1200)
+    elsif time.to_i < 1200
       (time.to_s + "am").insert(-5,":")
     else
       ((time.to_i - 1200).to_s + "pm").insert(-5,":")
