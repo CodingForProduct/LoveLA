@@ -10,6 +10,7 @@ class StopTest < ActiveSupport::TestCase
 
   test "should get stop" do
     assert_not @stop['display_name'].nil?
+    assert_equal(@stop['display_name'], "test stop")
   end
 
 end

@@ -9,5 +9,6 @@ class RouteTest < ActiveSupport::TestCase
 
   test "should get route" do
     assert_not @route['display_name'].nil?
+    assert_equal(@route['display_name'], "Test Route")
   end
 end
